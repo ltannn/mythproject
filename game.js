@@ -589,11 +589,7 @@ function safeEventCheck() {
 // ════════════════════════════════════════════════════════
 
 const OR_SPEECH = [
-  { speaker: 'COACH RIVERA',         text: 'Welcome to Monta Vista. You\'re freshmen. That means something here.' },
-  { speaker: 'COACH RIVERA',         text: 'This school has four hundred students. You\'ll see the same faces every single day for the next four years. What they think of you is entirely up to you.' },
-  { speaker: 'COACH RIVERA',         text: 'A few rules. Stay out of the senior lot. Don\'t touch the trophies in the front case. And if you\'re going to make a name for yourself — earn it.' },
-  { speaker: 'VICE PRINCIPAL HAYES', text: 'Your class schedules will be distributed at homeroom. Today is orientation. Look around. These are your people now.' },
-  { speaker: 'COACH RIVERA',         text: 'Before we continue — find your seat. This isn\'t assigned. But remember: where you sit on day one tells people something.' },
+  { speaker: 'COACH RIVERA',         text: 'Welcome to Monta Vista. You\'re a freshman.' },
 ];
 let _orSpeechIdx = 0;
 let _orChoiceResolved = false; // guard: resolveOrientationChoice fires exactly once
@@ -692,23 +688,19 @@ function resolveOrientationChoice(choice) {
   const OUTCOMES = {
     alone_back: {
       deltas: { intelligence: +1, happiness: -1, friendships: -1 },
-      text: 'Top row. You climb past empty seats until there\'s nobody on either side. The gym fills up below you.',
-      sub:  'Devon Clark sits two rows down. He nods once. Neither of you say anything. It\'s fine.',
+      text: 'Top row. The gym fills up below you.',
     },
     familiar_face: {
       deltas: { friendships: +2, relationships: +1, happiness: +1 },
-      text: 'You recognize them from middle school — Jordan Park. Their face changes when they see you. Relief. Same as yours.',
-      sub:  '"Thank god," Jordan says. "Sit down before someone worse does." You do.',
+      text: 'You recognize them from middle school.',
     },
     front_row: {
       deltas: { gpa: +0.3, extracurriculars: +1, happiness: -1, friendships: -1 },
-      text: 'The front row is mostly empty. You take the center seat. Coach Rivera makes eye contact immediately.',
-      sub:  '"Good. A student who pays attention." Someone behind you laughs quietly. You pretend not to hear it.',
+      text: 'The front row is mostly empty. You take the center seat.',
     },
     popular_kids: {
       deltas: { friendships: +2, relationships: +1, happiness: +1, intelligence: -1 },
-      text: 'Tyler Brooks is already holding court in the third row. You walk straight toward the group like you\'ve been there before.',
-      sub:  'One of them — tall, red hoodie — slides over without being asked. Tyler watches you sit down. "You\'re new," he says. It\'s not a question.',
+      text: 'You walk straight toward the group like you\'ve been there before.',
     },
   };
 
@@ -1362,12 +1354,9 @@ function showBioOutage() {
   const inner   = overlay.querySelector('.bio-inner');
 
   const beats = [
-    { delay: 0,    html: `<span class="outage-flash"></span><p>Mrs. Alvarez begins distributing the assessment rubrics. You pull back the paper towel on your tray. The smell hits harder now.</p>` },
-    { delay: 2400, html: `<p>Then — the lights. Every overhead fluorescent dies at once. The projector goes black. The ventilation fans wind down with a groan.</p>` },
-    { delay: 4600, html: `<span class="outage-emergency">⚠ EMERGENCY LIGHTING ACTIVATED</span><p>Red emergency strips flicker on along the baseboards. Outside the window, the sky has gone dark. Wind drives rain in sheets against the glass.</p>` },
-    { delay: 7200, html: `<p><span class="speaker">MRS. ALVAREZ:</span> <em>"Stay in your seats. Don't touch the specimens. Maintenance is — "</em> Her radio crackles. She listens. Her expression changes.</p>` },
-    { delay: 9800, html: `<p><span class="speaker">MRS. ALVAREZ:</span> <em>"All right. District policy. Weather-related power event. The practical is cancelled. Everyone receives credit for today."</em></p>` },
-    { delay: 12000, html: `<p class="outage-kicker">Automatic A. You didn't have to know a single organ. The storm just handed it to you.</p>` },
+    { delay: 0,    html: `<span class="outage-flash"></span><p>Mrs. Alvarez begins distributing the assessment rubrics.</p>` },
+    { delay: 2400, html: `<p>Then — the lights. All of them die at once.</p>` },
+    { delay: 4600, html: `<p class="outage-kicker">Because of the power outage, you got lucky and received an automatic A.</p>` },
   ];
 
   function renderBeat(idx) {
@@ -1497,7 +1486,6 @@ function showBioPractical() {
       <div class="or-badge">PERIOD 1 · BIOLOGY</div>
       <div class="practical-intro-title">PIG PRACTICAL</div>
       <p class="practical-intro-desc">Five dissection trays. Five pigs. You have one question per station.<br>Walk up, assess what you see, and answer.</p>
-      <div class="practical-intro-smell">The formaldehyde smell is sharp. Your eyes water slightly.</div>
       <button class="btn-primary" id="prac-start-btn" style="margin-top:28px">BEGIN →</button>
       <div class="or-key-hint" style="margin-top:6px;font-size:.7rem;opacity:.45">[ ENTER ] to begin</div>
     </div>
@@ -1521,14 +1509,7 @@ function showBioChemical() {
   const inner   = overlay.querySelector('.bio-inner');
 
   const beats = [
-    { delay: 0,    text: 'Lab Technician Torres wheels in a supply cart just as the practical begins. He sets two bottles on the counter without checking the labels.' },
-    { delay: 2800, text: 'You see it before he does. The left bottle is pale yellow — the formaldehyde neutralizer. The right bottle is a concentrated bleach solution. He reaches for the right one.' },
-    { delay: 5800, text: 'The moment bleach contacts the residual formaldehyde in the trays, a pale greenish vapor rises from the nearest tray. Then the next. It spreads fast.' },
-    { delay: 8200, text: 'The smell is immediate and violent. Your eyes water. The front row staggers back.', special: 'smell' },
-    { delay: 10200, text: 'Jaylen Rodriguez — front left, the guy who always answers first — stands up from his stool. Looks confused. Then his knees buckle. His stool skitters across the tile.', special: 'faint' },
-    { delay: 13000, text: 'MRS. ALVAREZ: "OUT! EVERYONE OUT RIGHT NOW!" The fire alarm trips. Students flood into the hallway. You make it to the courtyard, eyes streaming.', special: 'alarm' },
-    { delay: 15500, text: 'WVFD Engine 7 arrives in four minutes. Two paramedics evaluate Jaylen on a gurney in the parking lot. A hazmat unit follows six minutes behind.', special: 'ambulance' },
-    { delay: 18500, text: 'Three students are treated for dizziness. Jaylen goes to the hospital for observation — he\'s fine, but the school is liable. Every student in Bio gets an automatic A, posted that night.' },
+    { delay: 0,    text: 'You got lucky! They used the wrong chemicals to clean the pigs and now every student in Bio gets an automatic A,' },
   ];
 
   inner.innerHTML = `
@@ -1589,19 +1570,19 @@ function showBioClassEvent() {
   overlay.classList.add('open');
   const inner = overlay.querySelector('.bio-inner');
   const _bgBioLines = {
-    new_kid:       "You barely know the building layout. You follow the antiseptic smell.",
-    legacy:        "The Monta Vista crest above the door has been here longer than you have.",
-    scholarship:   "You earned your place in this room. Now you have to keep earning it.",
-    transfer:      "Different school, same frog smell. Some things don't change.",
-    local_legend:  "You've heard about this class since sixth grade. Everyone says it's brutal.",
-    military:      "You've started over enough times to know the first test sets the tone.",
-    online_famous: "Nobody in here knows you from your posts. Good.",
-    returnee:      "Room 102. You were in this hallway before. Feels different now.",
-    prodigy:       "You're the youngest one in here. You're also the most prepared.",
-    old_money:     "Your grandfather's name is on the science wing. No pressure.",
+    new_kid:       "Good luck!",
+    legacy:        "Good luck!",
+    scholarship:   "Good luck!",
+    transfer:      "Good luck!",
+    local_legend:  "Good luck!",
+    military:      "Good luck!",
+    online_famous: "Good luck!",
+    returnee:      "Good luck!",
+    prodigy:       "Good luck!",
+    old_money:     "Good luck!",
   };
   const _bgNote = (_bgBioLines[player.background && player.background.id] ||
-    "You make your way to the biology building. The antiseptic smell hits before you even open the door.");
+    "You make your way to the biology building.");
   inner.innerHTML = `
     <div class="bio-transition">
       <div class="or-badge">MONTA VISTA HIGH SCHOOL</div>
@@ -1609,7 +1590,7 @@ function showBioClassEvent() {
       <div class="bio-trans-subject">BIOLOGY</div>
       <div class="bio-trans-room">South Wing · Room 102</div>
       <div class="bio-trans-line"></div>
-      <p class="bio-trans-note">${_bgNote} Five dissection trays sit covered on the lab tables.</p>
+      <p class="bio-trans-note">${_bgNote} Five dissection trays sit on the lab tables.</p>
     </div>
   `;
   G.from(inner, { opacity: 0, duration: 0.7 });
@@ -1667,6 +1648,7 @@ function showPEBombThreat() {
 
     const _secretThought = (function() {
       const _t = {
+        /*
         anxiety:      "The silence is the worst part. Your brain won't stop running scenarios. You breathe through it, one count at a time. You've done this before.",
         learning:     "Your mind races in its own direction, like always. You catalog exits, patterns, details. A different kind of processing. It keeps you calm.",
         wealthy:      "You think about how none of this — the school, the floor, the bleachers — would feel real if you told anyone what your house looks like.",
@@ -1683,23 +1665,24 @@ function showPEBombThreat() {
         secret_keep:  "You think about what you know. About what it would mean if something actually happened here and certain people never got to answer for it.",
         language:     "You start counting in the other language. Quietly. In your head. It has always felt like a private room nobody else can enter.",
         dropout_risk: "You almost didn't come back this year. Sitting here now, you can't decide if that makes this feel more precious or more fragile.",
+        */
       };
-      return _t[player.secret && player.secret.id] || "The seconds stretch. You stop counting and just breathe.";
+      return _t[player.secret && player.secret.id] || "The seconds move slowly.";
     })();
 
     // Phase 1 sequence — plays up to the choice point
     const phase1 = [
       { delay: 0,    pa: '[— PA STATIC —]',   text: null, effect: 'crackle' },
       { delay: 900,  pa: '"ATTENTION ALL MONTA VISTA HIGH STUDENTS AND STAFF."', text: null, effect: 'alarm' },
-      { delay: 2800, pa: '"A CREDIBLE THREAT HAS BEEN RECEIVED AT THIS FACILITY."', text: null, effect: null },
+      { delay: 2800, pa: '"A THREAT HAS BEEN RECEIVED AT THIS FACILITY."', text: null, effect: null },
       { delay: 4600, pa: '"THIS IS A LOCKDOWN. THIS IS NOT A DRILL."', text: null, effect: 'strobe' },
       { delay: 6200, pa: '"ALL STUDENTS AND STAFF REPORT TO SECURE LOCATIONS IMMEDIATELY. DO NOT LEAVE YOUR SECURE LOCATION UNTIL FURTHER NOTICE."', text: null, effect: null },
-      { delay: 9000, pa: null, text: 'The gym lights cut. Emergency strips on the ceiling click to red.', effect: 'dim' },
+      /*{ delay: 9000, pa: null, text: 'The gym lights cut. Emergency strips on the ceiling click to red.', effect: 'dim' },
       { delay: 11200, pa: null, text: '"CORNER — NORTHEAST — NOW! GO GO GO!" Coach Williams doesn\'t sound like a coach anymore.', effect: 'corner' },
       { delay: 13400, pa: null, text: 'You compress into the far corner under the emergency exit sign. Cold concrete wall. Thirty bodies. Everyone is breathing too fast.', effect: 'hide' },
       { delay: 15600, pa: null, text: 'Someone starts sobbing quietly behind you. A freshman you don\'t know. You don\'t turn around. Nobody does.', effect: null },
       { delay: 17200, pa: null, text: _secretThought, effect: null },
-      { delay: 19000, pa: null, text: 'Coach Williams: "Nobody moves. I mean it. Nobody moves." His voice is completely flat. That\'s the scariest part.', effect: null },
+      { delay: 19000, pa: null, text: 'Coach Williams: "Nobody moves. I mean it. Nobody moves." His voice is completely flat. That\'s the scariest part.', effect: null },*/
     ];
 
     function addBeat(text, cls) {
@@ -1741,7 +1724,7 @@ function showPEBombThreat() {
       const choiceDiv = document.createElement('div');
       choiceDiv.className = 'threat-choice';
       choiceDiv.innerHTML = `
-        <p class="threat-choice-prompt">The emergency exit is 15 feet away. You could be outside in three seconds. Coach has his back turned.</p>
+        <p class="threat-choice-prompt">The emergency exit is 15 feet away.</p>
         <div class="threat-choice-btns">
           <button class="threat-btn-stay" id="threat-stay">STAY PUT</button>
           <button class="threat-btn-run"  id="threat-run">MAKE A RUN FOR IT</button>
@@ -1765,8 +1748,8 @@ function showPEBombThreat() {
     function runPhase2_stay() {
       const beats = [
         { delay: 0,    pa: '[41 MINUTES LATER]', text: null, time: true },
-        { delay: 1400, pa: null, text: 'All-clear. A handwritten note in locker 247 — almost certainly a prank. But SWAT swept every room anyway. Two dogs. The works.' },
-        { delay: 4200, pa: null, text: 'You walk out into the afternoon. The grass looks too bright. Nobody talks on the way to the parking lot.' },
+        { delay: 1400, pa: null, text: 'All-clear.' },
+        { delay: 4200, pa: null, text: 'You walk out into the afternoon.' },
       ];
       function rb(i) {
         const s = beats[i];
@@ -1786,10 +1769,8 @@ function showPEBombThreat() {
       const scene = document.getElementById('threat-scene');
       if (scene) scene.classList.add('run-flash');
       const beats = [
-        { delay: 0,    text: 'You move. Three seconds, door, outside. The air hits you like a wall. Sunlight.' },
+        { delay: 0,    text: 'You move. Three seconds, door, outside.' },
         { delay: 2200, text: 'You\'re the only student in the courtyard. A security officer sees you immediately. He does not look relieved.' },
-        { delay: 4200, text: 'Forty-five minutes later — after the all-clear — you\'re sitting in the main office. It was a prank. Everyone knows. The officer does not care.' },
-        { delay: 6400, text: 'Principal Reyes: "We\'ll need your parents here Monday morning." He doesn\'t raise his voice. That\'s somehow worse.' },
       ];
       function rb(i) {
         const s = beats[i];
@@ -1809,23 +1790,21 @@ function showPEBombThreat() {
           <div class="pe-result-icon" style="font-size:2.8rem">🏛️</div>
           <div class="pe-result-title" style="color:#e0c878;font-size:2rem">PRINCIPAL REYES</div>
           <p class="pe-result-text" style="font-size:1.25rem;max-width:600px;margin:0 auto 10px">
-            The office smells like carpet and old coffee. Your parents sit in the chairs against the wall.
-            Principal Reyes is behind his desk. He lets the silence run for a long moment before speaking.
+            The office smells like carpet and old coffee.
           </p>
           <p class="pe-result-text" style="font-size:1.2rem;font-style:italic;color:#ffd700;max-width:600px;margin:0 auto 18px">
-            "You left during a lockdown. Against direct orders. Against every protocol we've drilled for four years.
-            I need to understand why you thought that was the right call."
+            "You left during a lockdown. Against every protocol we have."
           </p>
           <p class="pe-result-text" style="font-size:1.1rem;color:#c8c0b0;max-width:560px;margin:0 auto 24px">
-            Your parents aren't saying anything. They're waiting to see what you do.
+            Your parents aren't saying anything.
           </p>
           <div class="threat-choice" style="margin-top:10px">
             <div class="threat-choice-btns" style="justify-content:center;gap:18px">
               <button class="threat-btn-stay" id="po-apologize" style="min-width:220px;font-size:1rem">
-                APOLOGIZE — "I panicked. I'm sorry."
+                APOLOGIZE
               </button>
               <button class="threat-btn-run" id="po-defend" style="min-width:220px;font-size:1rem">
-                DEFEND YOURSELF — "I thought my life was in danger."
+                DEFEND YOURSELF
               </button>
             </div>
           </div>
@@ -1843,16 +1822,7 @@ function showPEBombThreat() {
               "I panicked," you say. "I know I shouldn't have. I'm sorry."
             </p>
             <p class="pe-result-text" style="font-size:1.15rem;color:#c8c0b0;max-width:580px;margin:0 auto 14px">
-              Reyes studies you for a moment. He clicks his pen twice.
               "That's the right answer. Doesn't undo what you did — but it's the right answer."
-              He turns to your parents. "One week of lunch detention. Community service hours through the front office. That's my call."
-            </p>
-            <p class="pe-result-text" style="font-size:1.15rem;color:#e8e0d0;max-width:580px;margin:0 auto 14px">
-              Your parent puts a hand on your shoulder in the parking lot. They don't say much.
-              They don't need to. You already know.
-            </p>
-            <p class="pe-result-text" style="font-size:1.1rem;font-style:italic;color:#ffd700;max-width:560px;margin:0 auto 24px">
-              It goes in the record. But the way you handled the meeting won't.
             </p>
             <button class="btn-primary" id="pe-done-btn" style="margin-top:22px">CONTINUE →</button>
             <div class="or-key-hint" style="margin-top:6px;font-size:.7rem;opacity:.45">[ ENTER ] to continue</div>
@@ -1868,22 +1838,12 @@ function showPEBombThreat() {
         inner2.innerHTML = `
           <div class="pe-result-screen principal-scene">
             <div class="or-badge">PRINCIPAL'S OFFICE — CONTINUED</div>
-            <div class="pe-result-icon" style="font-size:2.4rem">🔥</div>
             <div class="pe-result-title" style="color:#e07070;font-size:1.8rem">YOU STOOD YOUR GROUND</div>
             <p class="pe-result-text" style="font-size:1.25rem;max-width:600px;margin:0 auto 14px">
-              "I thought there was a real shooter. I made a decision to survive. I'd make it again."
+              "I thought there was a real shooter."
             </p>
             <p class="pe-result-text" style="font-size:1.15rem;color:#c8c0b0;max-width:580px;margin:0 auto 14px">
-              Reyes doesn't blink. Long pause.
-              "That is the wrong answer in this office." He laces his fingers.
-              "Lockdown protocol exists so that one person running doesn't get thirty other people shot trying to chase them.
-              You think you're a variable. You're not. You're a domino."
-            </p>
-            <p class="pe-result-text" style="font-size:1.15rem;color:#e8e0d0;max-width:580px;margin:0 auto 14px">
-              Two weeks detention. A letter home. Required meeting with the school counselor.
-            </p>
-            <p class="pe-result-text" style="font-size:1.1rem;font-style:italic;color:#ff9966;max-width:560px;margin:0 auto 24px">
-              The thing is — he wasn't wrong. You know that now.
+              "That is the wrong answer in this office."
             </p>
             <button class="btn-primary" id="pe-done-btn" style="margin-top:22px">CONTINUE →</button>
             <div class="or-key-hint" style="margin-top:6px;font-size:.7rem;opacity:.45">[ ENTER ] to continue</div>
@@ -1934,9 +1894,8 @@ function showPEBombThreat() {
       inner2.innerHTML = `
         <div class="pe-result-screen">
           <div class="or-badge">PERIOD 4 · PE — LOCKDOWN CONCLUDED</div>
-          <div class="pe-result-icon">🚪</div>
           <div class="pe-result-title" style="color:#e05050">PRINCIPAL'S OFFICE.</div>
-          <p class="pe-result-text">It was a false alarm. But you ran during a lockdown — against direct orders. Monday morning: a meeting with Principal Reyes and your parents. It goes on your record.</p>
+          <p class="pe-result-text">It was a false alarm. But you ran during a lockdown — monday morning: a meeting with the principal.</p>
           <button class="btn-primary" id="pe-done-btn" style="margin-top:28px">CONTINUE →</button>
           <div class="or-key-hint" style="margin-top:6px;font-size:.7rem;opacity:.45">[ ENTER ] to continue</div>
         </div>
@@ -1945,9 +1904,8 @@ function showPEBombThreat() {
       inner2.innerHTML = `
         <div class="pe-result-screen">
           <div class="or-badge">PERIOD 4 · PE — LOCKDOWN CONCLUDED</div>
-          <div class="pe-result-icon">🔓</div>
           <div class="pe-result-title">FALSE ALARM.</div>
-          <p class="pe-result-text">A prank. Probably. But you were in that corner for forty-one minutes and your heart didn't slow down the whole time. Some things stay with you.</p>
+          <p class="pe-result-text">A prank. Probably.</p>
           <button class="btn-primary" id="pe-done-btn" style="margin-top:28px">CONTINUE →</button>
           <div class="or-key-hint" style="margin-top:6px;font-size:.7rem;opacity:.45">[ ENTER ] to continue</div>
         </div>

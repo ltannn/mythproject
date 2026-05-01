@@ -151,7 +151,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas:  { selfAwareness: +1 },
             flagsToSet:  ['observed_first_morning'],
-            narrative:   "You take it all in. Faces, groups, dynamics. By the time the bell rings you already know more than most people realize.",
           },
         },
         {
@@ -160,7 +159,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas:  { looks: +1, stress: -1 },
             flagsToSet:  ['confident_first_morning'],
-            narrative:   "Head up. Shoulders back. A few people glance your way. You don't know any of them yet. But they noticed.",
           },
         },
         {
@@ -169,7 +167,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas:  { friendships: +1, selfAwareness: +1 },
             flagsToSet:  ['connected_first_morning'],
-            narrative:   "You catch eyes with someone near the bulletin board who's clearly reading it too hard to pretend they're not nervous. You both kind of laugh. Day one isn't over yet.",
           },
         },
       ],
@@ -190,7 +187,6 @@ const MYTH_EVENTS = [
           label: 'Walk home slowly, thinking it over',
           outcome: {
             statDeltas: { selfAwareness: +1, stress: -1 },
-            narrative:  "You give yourself that. One slow walk. Things feel a little more possible than they did Monday morning.",
           },
         },
         {
@@ -198,14 +194,12 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { friendships: +1, relationships: +1 },
             flagsToSet: ['reached_out_week_one'],
-            narrative:  "You send the text before you can overthink it. They say yes. That matters more than you let yourself think right now.",
           },
         },
         {
           label: 'Go straight home and decompress alone',
           outcome: {
             statDeltas: { sleep: +1, stress: -2 },
-            narrative:  "You need it. No explanation required. Sometimes recovery is its own kind of strategy.",
           },
         },
       ],
@@ -230,7 +224,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { friendships: +2, stress: +1 },
             flagsToSet: ['sat_with_crowd_day_one'],
-            narrative:  "You walk over. There's a half-second where nobody says anything. Then someone pulls out a chair. You're in.",
           },
         },
         {
@@ -239,7 +232,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { selfAwareness: +2, stress: -1 },
             flagsToSet: ['solo_lunch_day_one'],
-            narrative:  "You eat alone. You notice things. The cafeteria has layers you wouldn't have seen from the loud table.",
           },
         },
         {
@@ -248,7 +240,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { stress: -2, culturality: +1 },
             flagsToSet: ['outdoor_lunch_day_one'],
-            narrative:  "Fresh air. Sun. The quad is quieter than you expected. You like it out here.",
           },
         },
       ],
@@ -271,7 +262,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { friendships: +1, toxicity: +1 },
             flagsToSet: ['accepted_first_party_invite'],
-            narrative:  "You say yes. Details come Friday afternoon. It's at someone's house whose name you vaguely recognize.",
           },
         },
         {
@@ -280,7 +270,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { selfAwareness: +1 },
             flagsToSet: ['maybe_first_party_invite'],
-            narrative:  "They respect the non-answer more than you expect. The details come anyway.",
           },
         },
         {
@@ -288,7 +277,6 @@ const MYTH_EVENTS = [
           hint:  'Hard pass',
           outcome: {
             statDeltas: { integrity: +1, friendships: -1 },
-            narrative:  "They say \"ok\" and you can't fully read the tone. Maybe it was the right call. Maybe you'll find out later.",
           },
         },
       ],
@@ -311,7 +299,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { friendships: +2, relationships: +1, stress: +1 },
             flagsToSet: ['went_homecoming_group'],
-            narrative:  "You coordinate outfits via text for three days straight. It's chaotic. It's fun.",
           },
         },
         {
@@ -320,7 +307,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { relationships: +2, stress: +2 },
             flagsToSet: ['asked_someone_homecoming'],
-            narrative:  "You do it. In person, between classes, with no preparation. They say yes. Your heart rate doesn't go back to normal for a while.",
           },
         },
         {
@@ -329,7 +315,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { integrity: +1, culturality: +1, stress: -1 },
             flagsToSet: ['skipped_homecoming'],
-            narrative:  "You and a few others who felt the same way end up at the diner on Route 9 until midnight. It becomes a story you tell for years.",
           },
         },
       ],
@@ -354,7 +339,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { gpa: +1, integrity: +2, stress: +1 },
             flagsToSet: ['wrote_something_real'],
-            narrative:  "You write it. You don't show anyone first. You turn it in and then feel something you can't fully name for the rest of the day.",
           },
         },
         {
@@ -362,7 +346,6 @@ const MYTH_EVENTS = [
           hint:  'Low risk',
           outcome: {
             statDeltas: { gpa: +1, stress: -1 },
-            narrative:  "It's a good paper. Competent. Your teacher gives it a B+ and writes \"well-crafted\" in the margin. You're fine with that.",
           },
         },
         {
@@ -370,7 +353,6 @@ const MYTH_EVENTS = [
           hint:  'You\'ve survived worse',
           outcome: {
             statDeltas: { gpa: -1, stress: +2, sleep: -2 },
-            narrative:  "You stay up until 2am. The paper is... something. You've written better. You've written worse. You turn it in.",
           },
         },
       ],
@@ -393,14 +375,12 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { gpa: +1, friendships: +1 },
             flagsToSet: ['joined_study_group'],
-            narrative:  "You meet in the library on Wednesday. It's actually productive. You leave understanding three things you didn't before.",
           },
         },
         {
           label: 'Decline — you work better solo',
           outcome: {
             statDeltas: { selfAwareness: +1 },
-            narrative:  "You study alone that night. Music on. No interruptions. You know yourself.",
           },
         },
         {
@@ -408,7 +388,6 @@ const MYTH_EVENTS = [
           hint:  'Easier in the moment',
           outcome: {
             statDeltas: { integrity: -1, stress: +1 },
-            narrative:  "You text 'something came up' twenty minutes before. The group texts back fine but you know you damaged something small.",
           },
         },
       ],
@@ -429,7 +408,6 @@ const MYTH_EVENTS = [
           label: 'Answer honestly — you have something to say',
           outcome: {
             statDeltas: { gpa: +1, selfAwareness: +1 },
-            narrative:  "You answer. It's not perfect but it's real. Your teacher nods. Someone near the back writes something down.",
           },
         },
         {
@@ -437,7 +415,6 @@ const MYTH_EVENTS = [
           hint:  'Buying time',
           outcome: {
             statDeltas: { stress: +1 },
-            narrative:  "The question repeated is: essentially the same question. You give an answer. It's fine. The moment passes.",
           },
         },
         {
@@ -445,7 +422,6 @@ const MYTH_EVENTS = [
           hint:  'Smooth redirect',
           outcome: {
             statDeltas: { integrity: -1, selfAwareness: +1 },
-            narrative:  "You gesture toward someone across the aisle. They go with it. Your teacher gives you a look you can't fully decode.",
           },
         },
       ],
@@ -470,14 +446,12 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { athleticism: +1, physique: +1, stress: +1 },
             flagsToSet: ['ran_hard_first_pe'],
-            narrative:  "You go out fast. A few people notice. Coach Rivera glances at his stopwatch when you finish. He doesn't say anything but you see him mark something.",
           },
         },
         {
           label: 'Pace yourself — it\'s a marathon, not a sprint',
           outcome: {
             statDeltas: { selfAwareness: +1, sleep: +1 },
-            narrative:  "Steady the whole way. You finish comfortably. Your lungs aren't burning at the end, which is more than you can say for some people.",
           },
         },
         {
@@ -485,7 +459,6 @@ const MYTH_EVENTS = [
           hint:  'Social strategy',
           outcome: {
             statDeltas: { friendships: +1 },
-            narrative:  "You end up alongside a few people at the same pace. By mile two you're all talking. PE becomes a different thing after that.",
           },
         },
       ],
@@ -508,7 +481,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { athleticism: +1, extracurriculars: +1, stress: +1 },
             flagsToSet: ['signed_up_for_tryouts'],
-            narrative:  "You write your name on the sheet before you can change your mind. Three weeks. You start doing something every afternoon.",
           },
         },
         {
@@ -517,14 +489,12 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { stress: +1 },
             flagsToSet: ['considered_tryouts'],
-            narrative:  "You take a photo of the flyer. You look at it three more times that week. The decision is still open.",
           },
         },
         {
           label: 'That\'s not your thing. Keep moving.',
           outcome: {
             statDeltas: { selfAwareness: +1 },
-            narrative:  "You walk past it. Knowing what you're not interested in is also a kind of clarity.",
           },
         },
       ],
@@ -546,14 +516,12 @@ const MYTH_EVENTS = [
           hint:  'Full send',
           outcome: {
             statDeltas: { athleticism: +1, physique: +1, friendships: +1, stress: -1 },
-            narrative:  "You play. You're rusty for the first few possessions then you find it. By the end someone asks if you're trying out for anything.",
           },
         },
         {
           label: 'Watch from the sideline this time',
           outcome: {
             statDeltas: { selfAwareness: +1 },
-            narrative:  "You watch. Next time you'll be ready to answer yes faster.",
           },
         },
       ],
@@ -576,14 +544,12 @@ const MYTH_EVENTS = [
           label: 'Just sit here for a while',
           outcome: {
             statDeltas: { stress: -2, sleep: +1, selfAwareness: +1 },
-            narrative:  "You stay until the sprinklers come on. It's the right amount of time.",
           },
         },
         {
           label: 'Call someone — feels like a good time',
           outcome: {
             statDeltas: { relationships: +1, stress: -1 },
-            narrative:  "Whoever answers, you talk for longer than you planned. That's a good sign about both of you.",
           },
         },
         {
@@ -592,7 +558,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { selfAwareness: +2, integrity: +1 },
             flagsToSet: ['wrote_something_down'],
-            narrative:  "You write three sentences about how today felt. It's not for anyone. That's exactly why it matters.",
           },
         },
       ],
@@ -613,14 +578,12 @@ const MYTH_EVENTS = [
           label: 'Push through — you\'ve done it before',
           outcome: {
             statDeltas: { integrity: +1, stress: +1, sleep: -1 },
-            narrative:  "You get through it. The day passes. You're still here at the end of it.",
           },
         },
         {
           label: 'Find five minutes of quiet before class starts',
           outcome: {
             statDeltas: { stress: -2, selfAwareness: +1 },
-            narrative:  "You find a bench around the side of the building. Five minutes. You breathe. It's not a cure but it's something.",
           },
         },
         {
@@ -628,7 +591,6 @@ const MYTH_EVENTS = [
           hint:  'Two words can open a door',
           outcome: {
             statDeltas: { relationships: +1, stress: -1 },
-            narrative:  "They respond in two minutes. \"Want to talk?\" Sometimes that's all it takes to feel slightly less alone in a crowded place.",
           },
         },
       ],
@@ -649,7 +611,6 @@ const MYTH_EVENTS = [
           label: 'Sit and let your mind go wherever',
           outcome: {
             statDeltas: { stress: -2, selfAwareness: +1 },
-            narrative:  "You stare at the ceiling for a while. Then the shelves. Then nothing. You feel slightly more like yourself when you leave.",
           },
         },
         {
@@ -657,14 +618,12 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { culturality: +1, gpa: +1, stress: -1 },
             flagsToSet: ['read_for_fun'],
-            narrative:  "You read the first twenty pages standing up and then have to sit down because you need to keep going.",
           },
         },
         {
           label: 'Write in your notes — process the week',
           outcome: {
             statDeltas: { selfAwareness: +2, stress: -1 },
-            narrative:  "You figure out three things you've been thinking around but not about. It helps.",
           },
         },
       ],
@@ -688,21 +647,18 @@ const MYTH_EVENTS = [
           hint:  'Not going to pretend that was fine',
           outcome: {
             statDeltas: { integrity: +1, toxicity: +1 },
-            narrative:  "They slow down but don't fully stop. Half-turn. Something flickers across their face — surprise, maybe. They keep moving. You said what you said.",
           },
         },
         {
           label: 'Let it go — it\'s not worth the energy',
           outcome: {
             statDeltas: { stress: +1, integrity: +1 },
-            narrative:  "You adjust your bag and keep moving. Some things aren't worth the cost of responding to them.",
           },
         },
         {
           label: 'Catch eyes with someone nearby and let the look say everything',
           outcome: {
             statDeltas: { selfAwareness: +1, friendships: +1 },
-            narrative:  "A shared moment with a stranger. They give you the 'that person' look. You both understand completely.",
           },
         },
       ],
@@ -725,7 +681,6 @@ const MYTH_EVENTS = [
           outcome: {
             statDeltas: { friendships: +1, stress: +2, integrity: +1 },
             flagsToSet: ['mediator_first_drama'],
-            narrative:  "You hear both versions. They're not the same story. You hold both without deciding. It's exhausting and the right thing.",
           },
         },
         {
@@ -733,14 +688,12 @@ const MYTH_EVENTS = [
           hint:  'Loyalty',
           outcome: {
             statDeltas: { friendships: +1, toxicity: +1, integrity: -1 },
-            narrative:  "You're their person right now. The other one clocks it. Something shifts in the group that doesn't fully unshift.",
           },
         },
         {
           label: 'Change the subject and refuse to engage',
           outcome: {
             statDeltas: { stress: -1, selfAwareness: +1 },
-            narrative:  "You pivot hard to something else. They both look annoyed for about thirty seconds then the energy slowly unsticks.",
           },
         },
       ],
@@ -761,7 +714,6 @@ const MYTH_EVENTS = [
           label: 'Let it go — it\'s actually fine',
           outcome: {
             statDeltas: { stress: +1 },
-            narrative:  "You check it twice more over the next hour then stop thinking about it. It's fine.",
           },
         },
         {
@@ -769,7 +721,6 @@ const MYTH_EVENTS = [
           hint:  'Asserting a boundary',
           outcome: {
             statDeltas: { integrity: +1, stress: -1 },
-            narrative:  "They seem surprised but they take it down without making it weird. You were right to ask.",
           },
         },
         {
@@ -777,7 +728,6 @@ const MYTH_EVENTS = [
           hint:  'You\'re going to do this regardless',
           outcome: {
             statDeltas: { stress: +2, selfAwareness: +1 },
-            narrative:  "Three hours later you've reconstructed an entire social timeline from fourteen likes. You know too much. You can't unknow it.",
           },
         },
       ],
