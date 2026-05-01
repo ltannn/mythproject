@@ -1516,6 +1516,7 @@ function initWorld3D(playerData) {
     }
   }
 
+  /*
   // Coach Rivera at the podium — distinctive outfit
   npcBody(-92, -58, 0, 0x1a1a5a, 0xe8b880);  // dark navy jacket
 
@@ -1591,6 +1592,7 @@ function initWorld3D(playerData) {
   NPCS.push({x:-70, z:-50, radius:3.5, label:'Quiet Student',
     msg:'She\'s writing something in a small notebook. She looks up briefly. "Sorry — just writing down first impressions. It\'s a thing I do."'});
   npcBody(-70, -50, 0, 0x886699, 0xf0c090);
+  */
 
   // Campus map sign near restriction boundary
   NPCS.push({x:-100, z:-25, radius:5, label:'Campus Map',
@@ -1708,7 +1710,7 @@ function initWorld3D(playerData) {
     solidBox(24,1.1,0.12,mk(0xeeeeee,0.5),tx,0,52); // NET is solid
   }
   mkLabel('Tennis Courts',10).position.set(-112,5,52);
-  NPCS.push({x:-112,z:52,radius:7,label:'Tennis Courts',msg:'3 hard courts - MVHS Tennis. The nets are solid so you cannot run through them!'});
+  NPCS.push({x:-112,z:52,radius:7,label:'Tennis Courts',msg:'4 hard courts - MVHS Tennis. The nets are solid so you cannot run through them!'});
   ZONES.push({x1:-130,x2:-86,z1:26,z2:78,name:'Tennis Courts'});
 
   prog(76, 'Track and football field...');
@@ -1743,7 +1745,7 @@ function initWorld3D(playerData) {
   solidBox(0.5,20,0.5,MT.pol,32,0,88); visBox(8,0.5,1.5,MT.pol,32,20,88); visBox(7,0.3,1.2,MT.eL,32,20.3,88,true);
   solidBox(0.5,20,0.5,MT.pol,72,0,88); visBox(8,0.5,1.5,MT.pol,72,20,88); visBox(7,0.3,1.2,MT.eL,72,20.3,88,true);
   mkLabel('Baseball Field',11).position.set(52,7,112);
-  NPCS.push({x:52,z:112,radius:8,label:'Baseball Field',msg:'MVHS Baseball - CCS Div II. Stand on the mound! Dugouts along the baselines.'});
+  NPCS.push({x:52,z:112,radius:8,label:'Baseball Field',msg:'MVHS Baseball. Stand on the mound! Dugouts along the baselines.'});
   ZONES.push({x1:6,x2:100,z1:66,z2:158,name:'Baseball Field'});
 
   prog(89, 'Field hockey...');

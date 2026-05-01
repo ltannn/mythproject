@@ -1770,7 +1770,7 @@ function showPEBombThreat() {
       if (scene) scene.classList.add('run-flash');
       const beats = [
         { delay: 0,    text: 'You move. Three seconds, door, outside.' },
-        { delay: 2200, text: 'You\'re the only student in the courtyard. A security officer sees you immediately. He does not look relieved.' },
+        { delay: 2200, text: 'You\'re the only student in the courtyard. A police officer sees you immediately. He does not look relieved.' },
       ];
       function rb(i) {
         const s = beats[i];
@@ -1787,8 +1787,7 @@ function showPEBombThreat() {
       inner2.innerHTML = `
         <div class="pe-result-screen principal-scene">
           <div class="or-badge">MONDAY MORNING · PRINCIPAL'S OFFICE</div>
-          <div class="pe-result-icon" style="font-size:2.8rem">🏛️</div>
-          <div class="pe-result-title" style="color:#e0c878;font-size:2rem">PRINCIPAL REYES</div>
+          <div class="pe-result-title" style="color:#e0c878;font-size:2rem">PRINCIPAL CLAUSNITZER</div>
           <p class="pe-result-text" style="font-size:1.25rem;max-width:600px;margin:0 auto 10px">
             The office smells like carpet and old coffee.
           </p>
@@ -3520,7 +3519,7 @@ window.showFreshmanYearEnd = function() {
     const chosen = new Set();
     function render() {
       const courses = [
-        { id:'apcsa',   label:'AP COMPUTER SCIENCE A', desc:'Code, problem-solve, survive Mr. Chen\'s grading. High stress. High reward.' },
+        { id:'apcsa',   label:'AP COMPUTER SCIENCE A', desc:'Code, problem-solve, survive Mr. Greenstein\'s grading. High stress. High reward.' },
         { id:'physics', label:'AP PHYSICS 1',           desc:'Mr. Birdsong. Egg drops and a surprise field trip. Hands-on. Unpredictable.' },
         { id:'studies', label:'STUDIES PERIOD',          desc:'Structured free period. More people. More drama. Easier on the GPA.' },
       ];
@@ -3735,15 +3734,15 @@ window.showAPCSA_Class1 = function() { Engine.setFlag('soph_apcsa1_started'); _a
 
 function _apcsa1_beat1() {
   _sophShow(`<div class="soph-badge">ROOM 214 · AP COMPUTER SCIENCE A</div><h1 class="soph-title">PERIOD 2.</h1>
-    <div class="soph-scene"><p>Mr. Chen's room smells like dry-erase markers. Posters of Java syntax line the walls. He's already writing before anyone's seated.</p></div>
-    <div class="soph-speaker">MR. CHEN</div><div class="soph-speech">"Find a seat. Doesn't matter which — for today."</div>
+    <div class="soph-scene"><p>Mr. Greenstein's room smells like dry-erase markers. Posters of Java syntax line the walls. He's already writing before anyone's seated.</p></div>
+    <div class="soph-speaker">MR. GREENSTEIN</div><div class="soph-speech">"Find a seat. Doesn't matter which — for today."</div>
     <div class="soph-scene"><p>You sit. The kid next to you already has their laptop open.</p></div>
     <div class="soph-nav"><span class="soph-progress">1 / 5</span><button class="btn-primary" id="soph-next">NEXT →</button></div>`);
   document.getElementById('soph-next').onclick = _apcsa1_beat2;
 }
 function _apcsa1_beat2() {
   _sophShow(`<div class="soph-badge">ROOM 214 · AP COMPUTER SCIENCE A</div>
-    <div class="soph-speaker">MR. CHEN</div><div class="soph-speech">"This is AP CSA. We use Java. You write code, read code, debug code. The AP exam is in May. I do not curve."</div>
+    <div class="soph-speaker">MR. GREENSTEIN</div><div class="soph-speech">"This is AP CSA. We use Java. You write code, read code, debug code. The AP exam is in May. I do not curve."</div>
     <div class="soph-speech">"First task. What does this print?"</div>
     <div class="soph-code-block">System.out.println("Hello" + " " + "World");</div>
     <div class="soph-prompt">WHAT IS THE OUTPUT?</div>
@@ -3759,7 +3758,7 @@ function _apcsa1_beat2() {
 function _apcsa1_q1result(correct) {
   Engine.modifyStat('gpa', correct ? 1 : -0.5); _flushStatToast();
   _sophShow(`<div class="soph-badge">ROOM 214 · AP COMPUTER SCIENCE A</div>
-    <div class="soph-speaker">MR. CHEN</div>
+    <div class="soph-speaker">MR. GREENSTEIN</div>
     <div class="soph-speech">${correct ? '"Correct. String concatenation." He marks his gradebook.' : '"No. Read the operators." He marks his gradebook.'}</div>
     <div class="soph-stat-delta ${correct ? '' : 'neg'}">GPA ${correct ? '+1.0' : '−0.5'}</div>
     <div class="soph-scene"><p>Class moves on. Three more exercises. Your hand hurts by the end.</p></div>
@@ -3783,7 +3782,7 @@ function _apcsa1_beat4() {
 }
 function _apcsa1_beat5(narr) {
   _sophShow(`<div class="soph-badge">ROOM 214 · AP COMPUTER SCIENCE A</div>
-    <div class="soph-scene"><p>${narr}</p><p>Chen's problem set is already in your bag.</p></div>
+    <div class="soph-scene"><p>${narr}</p><p>Greenstein's problem set is already in your bag.</p></div>
     <div class="soph-nav"><span class="soph-progress">5 / 5</span><button class="btn-primary" id="soph-done">CONTINUE →</button></div>`);
   document.getElementById('soph-done').onclick = () => _sophDone('soph_apcsa1_done');
 }
@@ -3795,7 +3794,7 @@ window.showAPCSA_Final = function() { Engine.setFlag('soph_apcsa_final_started')
 
 function _apcsa_final_beat1() {
   _sophShow(`<div class="soph-badge">ROOM 214 · AP COMPUTER SCIENCE A — FINAL EXAM</div><h1 class="soph-title">FINALS WEEK.</h1>
-    <div class="soph-scene"><p>Desks spread apart. No bags. Assigned seats printed in 8-point font. Two hours. Chen sets a timer on the projector and sits down without a word.</p></div>
+    <div class="soph-scene"><p>Desks spread apart. No bags. Assigned seats printed in 8-point font. Two hours. Greenstein sets a timer on the projector and sits down without a word.</p></div>
     <div class="soph-nav"><span class="soph-progress">Exam begins.</span><button class="btn-primary" id="soph-next">BEGIN EXAM →</button></div>`);
   document.getElementById('soph-next').onclick = _apcsa_final_q1;
 }
@@ -3862,7 +3861,7 @@ function _apcsa_final_finish() {
   const gpaD = _apcsa_correct >= 3 ? 2 : _apcsa_correct === 2 ? 1 : 0;
   if (gpaD) Engine.modifyStat('gpa', gpaD); _flushStatToast();
   _sophShow(`<div class="soph-badge">ROOM 214 — FINAL · COMPLETE</div><h1 class="soph-title">PENCILS DOWN.</h1>
-    <div class="soph-scene"><p>Chen collects the exams without a word. Marcus gives you a look on the way out: <em>how'd you do?</em> You shrug.</p></div>
+    <div class="soph-scene"><p>Greenstein collects the exams without a word. Marcus gives you a look on the way out: <em>how'd you do?</em> You shrug.</p></div>
     <div class="soph-stat-delta ${gpaD>0?'':'neg'}">GPA ${gpaD>0?'+':'±'}${gpaD} · ${_apcsa_correct} / 4 correct</div>
     <div class="soph-nav"><span></span><button class="btn-primary" id="soph-done">CONTINUE →</button></div>`);
   document.getElementById('soph-done').onclick = () => _sophDone('soph_apcsa_final_done');
@@ -3904,7 +3903,7 @@ function _apcsa_ambulance_scene() {
     { ms: 3200, txt: '🚑  Sirens outside. Getting louder. Red and blue through the windows.' },
     { ms: 4600, txt: 'Paramedics push through the double doors with a gurney. The hallway clears in seconds.' },
     { ms: 6100, txt: '"Jaw fracture — possible. Pulse stable." Neck brace. Backboard. You can\'t feel your face.' },
-    { ms: 7800, txt: '🚑  The exam room empties out to watch through the glass. Chen stands in the doorway, not moving.' },
+    { ms: 7800, txt: '🚑  The exam room empties out to watch through the glass. Greenstein stands in the doorway, not moving.' },
     { ms: 9400, txt: 'Ambulance doors. Cold air. The siren starts again. Then everything goes very quiet.' },
   ];
 
@@ -3949,9 +3948,8 @@ function _apcsa_hospital() {
         <span>PULSE &nbsp;72 BPM &nbsp;·&nbsp; BP 118/76 &nbsp;·&nbsp; O₂ 98%</span>
       </div>
       <div class="soph-scene" style="color:#c0d0e8;margin-top:14px">
-        <p>White ceiling. The monitor beeps every second, steady. Your jaw feels like poured concrete and you can't open it. An IV line runs into your left arm.</p>
-        <p>The doctor leans in. "Mandibular fracture. You hit the basin edge. Four stitches, jaw wired shut — six weeks minimum. Soft foods only. No talking above a whisper."</p>
-        <p>You didn't finish the exam. Chen posts a make-up on the portal — district policy — but you're eating through a straw for a month and a half and every person in that hallway saw it happen.</p>
+        <p>White ceiling. The monitor beeps every second, steady. Your jaw feels like poured concrete and you can't open it.</p>
+        <p>You didn't finish the exam. Greenstein posts a make-up on schoology and every person in that hallway saw it happen.</p>
       </div>
     </div>
     <div class="soph-stat-delta neg" style="margin-top:14px">GPA −1 &nbsp;·&nbsp; STRESS +3 &nbsp;·&nbsp; SLEEP −2</div>
@@ -4220,11 +4218,11 @@ function _studies1_beat2() {
     <div class="soph-prompt">WHAT DO YOU SAY FIRST?</div>
     <div class="soph-choices">
       <button class="soph-choice" id="st-a"><span class="soph-choice-label">"HEY — I'M ${player.name || 'ME'}."</span></button>
-      <button class="soph-choice" id="st-b"><span class="soph-choice-label">"YOU HAVE THAT CLASS WITH MR. CHEN, RIGHT?"</span></button>
+      <button class="soph-choice" id="st-b"><span class="soph-choice-label">"YOU HAVE THAT CLASS WITH MR. GREENSTEIN, RIGHT?"</span></button>
       <button class="soph-choice" id="st-c"><span class="soph-choice-label">WAIT FOR THEM TO GO FIRST</span></button>
     </div><div class="soph-nav"><span class="soph-progress">2 / 5</span></div>`);
   document.getElementById('st-a').onclick = () => { Engine.modifyStats({relationships:1,integrity:1}); _flushStatToast(); _studies1_beat3('"Oh — yeah. Hey." They smile once. Something shifted.'); };
-  document.getElementById('st-b').onclick = () => { Engine.modifyStats({relationships:1,selfAwareness:1}); _flushStatToast(); _studies1_beat3('"Yeah, Chen is brutal." You both laugh. Nguyen says time.'); };
+  document.getElementById('st-b').onclick = () => { Engine.modifyStats({relationships:1,selfAwareness:1}); _flushStatToast(); _studies1_beat3('"Yeah, Greenstein is brutal." You both laugh. Nguyen says time.'); };
   document.getElementById('st-c').onclick = () => { Engine.modifyStats({selfAwareness:1}); _flushStatToast(); _studies1_beat3('"I\'m Jordan." You give your name back.'); };
 }
 function _studies1_beat3(narr) {
@@ -4304,7 +4302,7 @@ function _studies2_beat4() {
 window.showPhysics_Class1 = function() { Engine.setFlag('soph_physics1_started'); _phys1_intro(); };
 function _phys1_intro() {
   _sophShow(`<div class="soph-badge">ROOM 203 · AP PHYSICS 1</div><h1 class="soph-title">EGG DROP DAY.</h1>
-    <div class="soph-scene"><p>Mr. Birdsong is standing on a desk holding a raw egg. She's smiling in a way that should concern you.</p></div>
+    <div class="soph-scene"><p>Mr. Birdsong is standing on a desk holding a raw egg. He's smiling in a way that should concern you.</p></div>
     <div class="soph-speaker">Mr. BIRDSONG</div><div class="soph-speech">"You design a protective device. It drops from the second-floor balcony. Egg survives — full marks. Egg dies — partial. No device — zero."</div>
     <div class="soph-scene"><p>Materials table: bubble wrap, straws, rubber bands, cotton balls, a plastic bag, cardboard, tape, foam pieces.</p></div>
     <div class="soph-nav"><span class="soph-progress">Build Phase</span><button class="btn-primary" id="soph-next">START BUILDING →</button></div>`);
@@ -4470,7 +4468,7 @@ function _fieldtrip_missedbus() {
   _sophShow(`<div class="soph-badge">GREAT AMERICA — 4:07 PM</div>
     <h1 class="soph-title" style="color:#fc7b54">YOU MISSED THE BUS.</h1>
     <div class="soph-scene"><p>You sprint to the front gate — lungs burning, worksheet flying out of your hands. The parking lot is empty. The bus is gone.</p></div>
-    <div class="soph-scene"><p>A security guard points to a folded note taped to the gate post. <em>"Called your emergency contact. Mr. Birdsong."</em></p></div>
+    <div class="soph-scene"><p>A police officer points to a folded note taped to the gate post. <em>"Called your emergency contact. Mr. Birdsong."</em></p></div>
     <div class="soph-speaker">MR. BIRDSONG (via phone)</div>
     <div class="soph-speech">"3:45. I said 3:45. I'm turning around, but this is going in your file. One more stunt like this and I'm pulling your lab grade entirely."</div>
     <div class="soph-scene"><p>The ride home is silent. Birdsong doesn't say another word. You stare out the window with ${_gaVisited.size} rides worth of guilt and a dead phone battery.</p></div>

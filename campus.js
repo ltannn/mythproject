@@ -333,6 +333,7 @@ const ZONES = [
 // Dialogue is registered by story modules via Engine.addDialogue(npcId, tree)
 const NPCS = [
   // ─ Staff ─────────────────────────────────────────
+  /*
   {
     id: 'ms_chen',
     name: 'Ms. Chen',
@@ -584,6 +585,7 @@ const NPCS = [
     statRequirements: {},
     orientationRole: 'audience',
   },
+  */
 ];
 
 // ── Interaction object shells ─────────────────────────
