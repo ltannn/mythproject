@@ -364,8 +364,8 @@ const NPCS = [
     statRequirements: {},
   },
   {
-    id: 'coach_rivera',
-    name: 'Coach Rivera',
+    id: 'coach_thomas',
+    name: 'Coach Thomas',
     role: 'PE / Track Coach',
     portrait: '👨‍🏫',
     defaultZone: 'gym',

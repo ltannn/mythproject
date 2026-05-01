@@ -438,7 +438,7 @@ const MYTH_EVENTS = [
     trigger: s => s.grade === 9 && s.week === 1 && s.period.id === 'period_3' && s.currentZone?.id === 'gym',
     scene: {
       location: 'GYM',
-      setup: "First PE class. The gym smells exactly like every gym you've ever been in. Coach Rivera is calling roll from a clipboard. Then he says you're running a mile to start the year. Some people groan. Some people start stretching immediately. You recognize both types.",
+      setup: "First PE class. The gym smells exactly like every gym you've ever been in. Coach Thomas is calling roll from a clipboard. Then he says you're running a mile to start the year. Some people groan. Some people start stretching immediately. You recognize both types.",
       choices: [
         {
           label: 'Run it hard — set the tone early',
