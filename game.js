@@ -441,7 +441,7 @@ function startRandomizeScene() {
 //  SCENE 6 — CHARACTER CARD
 // ════════════════════════════════════════════════════════
 function startCharCardScene() {
-  const groupLabels = { mob: 'GAYGOS', balance: 'XBOX', grind: "LUCAS'S GANG" };
+  const groupLabels = { mob: 'SOGYAG', balance: 'XOBX', grind: "SACUL" };
   const groupColors = { mob: '#FC7B54', balance: '#F7B731', grind: '#6BCB77' };
   const persLabels  = {
     grinder: 'THE GRINDER', social: 'SOCIAL BUTTERFLY',
@@ -2083,7 +2083,7 @@ function showFreshmanYearEnd() {
 }
 
 function groupLabels_g(g) {
-  return { mob: 'GAYGOS', balance: 'XBOX', grind: "LUCAS'S GANG" }[g] || '—';
+  return { mob: 'SOGYAG', balance: 'XOBX', grind: "SACUL" }[g] || '—';
 }
 function persLabels_g(p) {
   return {
