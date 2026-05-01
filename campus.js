@@ -287,7 +287,7 @@ const ZONES = [
     id: 'athletic_field',
     name: 'Athletic Field / Track',
     shortName: 'The Track',
-    description: 'The 400m track around the football field. Early morning practice, late afternoon games. The scoreboard lights up on Friday nights. This field holds a lot of memory.',
+    description: 'The 400m track around the football field.',
     type: 'sports',
     unlocksAt: 11,
     mapGrid: { col: 3, row: 6 },

@@ -642,29 +642,24 @@ function _showSeatChoice(inner) {
     <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
     <h1 class="or-title">WHERE DO YOU SIT?</h1>
     <div class="or-scene">
-      <p>The gym smells like floor wax and new shoes. The bleachers are filling up fast. You've got maybe ninety seconds before Coach Rivera starts talking again.</p>
       <p class="or-prompt">Where do you go? <span class="or-key-hint">[ press 1 – 4 ]</span></p>
     </div>
     <div class="or-choices" id="or-choices-live">
       <button class="or-choice-btn" data-choice="alone_back">
         <span class="ocb-num">1</span>
         <span class="ocb-label">ALONE IN THE BACK</span>
-        <span class="ocb-hint">Top row. Nobody bothers you. You can see everything from up here.</span>
       </button>
       <button class="or-choice-btn" data-choice="familiar_face">
         <span class="ocb-num">2</span>
         <span class="ocb-label">NEXT TO SOMEONE FAMILIAR</span>
-        <span class="ocb-hint">You recognize them from middle school. Small relief. Just barely.</span>
       </button>
       <button class="or-choice-btn" data-choice="front_row">
         <span class="ocb-num">3</span>
         <span class="ocb-label">FRONT ROW</span>
-        <span class="ocb-hint">Make an impression. Let Coach Rivera see your face first.</span>
       </button>
       <button class="or-choice-btn" data-choice="popular_kids">
         <span class="ocb-num">4</span>
         <span class="ocb-label">NEXT TO THE POPULAR KIDS</span>
-        <span class="ocb-hint">You spot them immediately. Everyone does. A few glance over.</span>
       </button>
     </div>
   `;
