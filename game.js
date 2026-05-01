@@ -589,7 +589,7 @@ function safeEventCheck() {
 // ════════════════════════════════════════════════════════
 
 const OR_SPEECH = [
-  { speaker: 'COACH RIVERA',         text: 'Welcome to Westbrook. You\'re freshmen. That means something here.' },
+  { speaker: 'COACH RIVERA',         text: 'Welcome to Monta Vista. You\'re freshmen. That means something here.' },
   { speaker: 'COACH RIVERA',         text: 'This school has four hundred students. You\'ll see the same faces every single day for the next four years. What they think of you is entirely up to you.' },
   { speaker: 'COACH RIVERA',         text: 'A few rules. Stay out of the senior lot. Don\'t touch the trophies in the front case. And if you\'re going to make a name for yourself — earn it.' },
   { speaker: 'VICE PRINCIPAL HAYES', text: 'Your class schedules will be distributed at homeroom. Today is orientation. Look around. These are your people now.' },
@@ -611,7 +611,7 @@ function showOrientationOverlay() {
 function _renderSpeechLine(inner) {
   const line = OR_SPEECH[_orSpeechIdx];
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
     <div class="or-speech-speaker">${line.speaker}</div>
     <p class="or-speech-text">"${line.text}"</p>
     <div class="or-speech-nav">
@@ -639,7 +639,7 @@ function _renderSpeechLine(inner) {
 
 function _showSeatChoice(inner) {
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
     <h1 class="or-title">WHERE DO YOU SIT?</h1>
     <div class="or-scene">
       <p>The gym smells like floor wax and new shoes. The bleachers are filling up fast. You've got maybe ninety seconds before Coach Rivera starts talking again.</p>
@@ -727,7 +727,7 @@ function resolveOrientationChoice(choice) {
   // Swap inner content to result screen — no stat line shown
   const inner = document.querySelector('.or-inner');
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
     <p class="or-result-text">${outcome.text}</p>
     <p class="or-result-sub">${outcome.sub}</p>
     <button class="btn-primary" id="or-continue-btn" style="margin-top:28px;align-self:flex-start">BEGIN FRESHMAN YEAR →</button>
@@ -778,7 +778,7 @@ function renderMap() {
   // Title strip
   mapEl.innerHTML = `
     <div class="map-title-strip" style="grid-column:1/-1">
-      WESTBROOK HIGH SCHOOL
+      MONTA VISTA HIGH SCHOOL
       <span class="map-compass">CUPERTINO, CA ☀️</span>
     </div>
   `;
@@ -1104,7 +1104,7 @@ function showClubFairOverlay(boothType) {
     ? `<div class="cf-rumor-tag">💬 <em>"${player.rumor}"</em></div>`
     : '';
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; CLUB FAIR</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; CLUB FAIR</div>
     ${_rumorLine}
     <div class="cf-icon">${data.icon}</div>
     <div class="cf-title">${data.name}</div>
@@ -1153,7 +1153,7 @@ function resolveClubChoice(boothType, joined) {
 
   const inner = overlay.querySelector('.cf-inner');
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; CLUB FAIR</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; CLUB FAIR</div>
     <div class="cf-icon">${joined ? '✓' : '—'}</div>
     <div class="cf-title">${joined ? 'COMMITTED.' : 'YOUR CALL.'}</div>
     <p class="cf-desc">${joined
@@ -1234,7 +1234,7 @@ function showClubMissedOverlay() {
 
   const inner = overlay.querySelector('.cf-inner');
   inner.innerHTML = `
-    <div class="or-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; COMMITMENT</div>
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; COMMITMENT</div>
     <div class="cf-title">YOU MISSED ${clubName.toUpperCase()}.</div>
     <p class="cf-desc">You didn't show up. People noticed.</p>
     <button class="btn-primary" id="cf-done-btn" style="margin-top:28px">OK</button>
@@ -1595,7 +1595,7 @@ function showBioClassEvent() {
   const inner = overlay.querySelector('.bio-inner');
   const _bgBioLines = {
     new_kid:       "You barely know the building layout. You follow the antiseptic smell.",
-    legacy:        "The Westbrook crest above the door has been here longer than you have.",
+    legacy:        "The Monta Vista crest above the door has been here longer than you have.",
     scholarship:   "You earned your place in this room. Now you have to keep earning it.",
     transfer:      "Different school, same frog smell. Some things don't change.",
     local_legend:  "You've heard about this class since sixth grade. Everyone says it's brutal.",
@@ -1609,7 +1609,7 @@ function showBioClassEvent() {
     "You make your way to the biology building. The antiseptic smell hits before you even open the door.");
   inner.innerHTML = `
     <div class="bio-transition">
-      <div class="or-badge">WESTBROOK HIGH SCHOOL</div>
+      <div class="or-badge">MONTA VISTA HIGH SCHOOL</div>
       <div class="bio-trans-period">PERIOD 1</div>
       <div class="bio-trans-subject">BIOLOGY</div>
       <div class="bio-trans-room">South Wing · Room 102</div>
@@ -1653,7 +1653,7 @@ function showPEBombThreat() {
       <div class="threat-scene" id="threat-scene">
         <div class="threat-static" id="threat-static"></div>
         <div class="threat-alert-bar" id="threat-bar">
-          <span class="threat-bar-text">🚨 EMERGENCY BROADCAST — WESTBROOK HIGH SCHOOL 🚨</span>
+          <span class="threat-bar-text">🚨 EMERGENCY BROADCAST — MONTA VISTA HIGH SCHOOL 🚨</span>
         </div>
         <div class="threat-broadcast-stamp" id="threat-stamp">LIVE</div>
         <div class="threat-pa" id="threat-pa"></div>
@@ -1695,7 +1695,7 @@ function showPEBombThreat() {
     // Phase 1 sequence — plays up to the choice point
     const phase1 = [
       { delay: 0,    pa: '[— PA STATIC —]',   text: null, effect: 'crackle' },
-      { delay: 900,  pa: '"ATTENTION ALL WESTBROOK HIGH STUDENTS AND STAFF."', text: null, effect: 'alarm' },
+      { delay: 900,  pa: '"ATTENTION ALL MONTA VISTA HIGH STUDENTS AND STAFF."', text: null, effect: 'alarm' },
       { delay: 2800, pa: '"A CREDIBLE THREAT HAS BEEN RECEIVED AT THIS FACILITY."', text: null, effect: null },
       { delay: 4600, pa: '"THIS IS A LOCKDOWN. THIS IS NOT A DRILL."', text: null, effect: 'strobe' },
       { delay: 6200, pa: '"ALL STUDENTS AND STAFF REPORT TO SECURE LOCATIONS IMMEDIATELY. DO NOT LEAVE YOUR SECURE LOCATION UNTIL FURTHER NOTICE."', text: null, effect: null },
@@ -2043,7 +2043,7 @@ function showFreshmanYearEnd() {
   const el = document.getElementById('year-end-overlay');
   el.innerHTML = `
     <div class="yr-inner">
-      <div class="yr-top-badge">WESTBROOK HIGH SCHOOL · CUPERTINO, CA</div>
+      <div class="yr-top-badge">MONTA VISTA HIGH SCHOOL · CUPERTINO, CA</div>
       <div class="yr-year-label">FRESHMAN YEAR</div>
       <div class="yr-complete">COMPLETE</div>
       <div class="yr-divider"></div>
@@ -2191,7 +2191,7 @@ function showSophomoreYear() {
   function render() {
     overlay.innerHTML = `
       <div class="ys-inner">
-        <div class="ys-badge">WESTBROOK HIGH · SOPHOMORE YEAR</div>
+        <div class="ys-badge">MONTA VISTA HIGH · SOPHOMORE YEAR</div>
         <div class="ys-title">CHOOSE YOUR PATHS</div>
         <div class="ys-subtitle">Pick <strong>2</strong> — they define the year.</div>
         <div class="ys-grid">
@@ -2279,7 +2279,7 @@ function showSophomoreYearEnd() {
   const overlay=_getYrOverlay(), now=_currentStats();
   overlay.innerHTML=`
     <div class="ys-inner">
-      <div class="ys-badge">WESTBROOK HIGH · CUPERTINO, CA</div>
+      <div class="ys-badge">MONTA VISTA HIGH · CUPERTINO, CA</div>
       <div class="ys-year-label">SOPHOMORE YEAR</div>
       <div class="yr-complete">COMPLETE</div>
       <div class="yr-divider"></div>
@@ -2332,7 +2332,7 @@ function showJuniorYear() {
   function render() {
     overlay.innerHTML = `
       <div class="ys-inner">
-        <div class="ys-badge">WESTBROOK HIGH · JUNIOR YEAR</div>
+        <div class="ys-badge">MONTA VISTA HIGH · JUNIOR YEAR</div>
         <div class="ys-title">CHOOSE YOUR COURSES</div>
         <div class="ys-subtitle">Pick <strong>2 courses</strong> — these hit your transcript.</div>
         <div class="ys-grid">
@@ -2909,7 +2909,7 @@ function _jrCollegeSearch(done) {
   _college_beat1();
 }
 function _college_beat1() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — COLLEGE COUNSELING</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — COLLEGE COUNSELING</div>
     <h1 class="soph-title" style="font-size:1.9rem">COLLEGE SEARCH.</h1>
     <div class="soph-scene"><p>October of junior year. Every teacher suddenly brings up college. Your parents ask about it at dinner. Naviance and Fiske Guide are open on every tab. Your counselor, Mr. Okonkwo, sits down across from you.</p></div>
     <div class="soph-speaker">MR. OKONKWO</div><div class="soph-speech">"Let's build your list. You need reaches, matches, and safeties. No all-reaches. No all-safeties. Where do you want to go?"</div>
@@ -2922,7 +2922,7 @@ function _college_beat1() {
   document.querySelectorAll('#soph-inner .soph-choice').forEach(b => { b.onclick = () => { window._collegeScore = (window._collegeScore||0) + parseInt(b.dataset.pts); _college_beat2(); }; });
 }
 function _college_beat2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — COLLEGE SEARCH · CAMPUS VISIT</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — COLLEGE SEARCH · CAMPUS VISIT</div>
     <div class="soph-scene"><p>You have one free Saturday. Okonkwo says campus visits matter — you need to actually feel the place before you commit four years of your life to it.</p></div>
     <div class="soph-prompt">WHERE DO YOU GO?</div>
     <div class="soph-choices">
@@ -2933,7 +2933,7 @@ function _college_beat2() {
   document.querySelectorAll('#soph-inner .soph-choice').forEach(b => { b.onclick = () => { window._collegeScore = (window._collegeScore||0) + parseInt(b.dataset.pts); _college_beat3(); }; });
 }
 function _college_beat3() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — COLLEGE COUNSELING · COMMON APP ESSAY</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — COLLEGE COUNSELING · COMMON APP ESSAY</div>
     <div class="soph-scene"><p>The Common App essay. 650 words. Okonkwo says admissions officers read thousands of these. <em>"The ones they remember are honest."</em></p></div>
     <div class="soph-prompt">YOUR ESSAY ANGLE:</div>
     <div class="soph-choices">
@@ -2958,7 +2958,7 @@ function _college_result() {
     narr='Okonkwo gives you the look. The serious one. "You have to take this seriously. This is not something you can wing." You leave feeling behind. Because you are.';
   }
   Engine.modifyStats({ intelligence: intD, happiness: happyD, stress: stressD }); _flushStatToast();
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — COLLEGE COUNSELING · OUTCOME</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — COLLEGE COUNSELING · OUTCOME</div>
     <div class="soph-scene"><p>${narr}</p></div>
     <div class="soph-scene"><p style="color:#c8bfa8;font-size:13px">Senior year applications open in August. You have a head start — or you don't. Either way, it's coming.</p></div>
     <div class="soph-stat-delta">+${intD} INT · Happiness ${happyD>=0?'+':''}${happyD} · Stress ${stressD>=0?'+':''}${stressD}</div>
@@ -3030,7 +3030,7 @@ function _jrSoc_drivingResult() {
 }
 
 function _jrSoc_party() {
-  _sophShow(`<div class="soph-badge">FRIDAY NIGHT — WESTBROOK · 10:00 PM</div>
+  _sophShow(`<div class="soph-badge">FRIDAY NIGHT — MONTA VISTA · 10:00 PM</div>
     <h1 class="soph-title" style="font-size:1.9rem">FIRST REAL PARTY.</h1>
     <div class="soph-scene"><p>Kai's house. Parents are out of town. Word spread on Friday morning and now there are 40 people in a house meant for six. The music is loud enough to feel it in your chest.</p></div>
     <div class="soph-prompt">HOW DO YOU SHOW UP?</div>
@@ -3044,7 +3044,7 @@ function _jrSoc_party() {
   document.getElementById('party-c').onclick = () => { Engine.modifyStats({happiness:1,relationships:1}); _flushStatToast(); _jrSoc_party2(); };
 }
 function _jrSoc_party2() {
-  _sophShow(`<div class="soph-badge">FRIDAY NIGHT — WESTBROOK · 11:15 PM</div>
+  _sophShow(`<div class="soph-badge">FRIDAY NIGHT — MONTA VISTA · 11:15 PM</div>
     <div class="soph-scene"><p>By 11 PM things are rowdy. Someone knocked over a lamp. Kai looks like he's reconsidering his life choices.</p></div>
     <div class="soph-prompt">WHAT DO YOU DO?</div>
     <div class="soph-choices">
@@ -3071,7 +3071,7 @@ function _jrSoc_party3() {
 }
 
 function _jrSoc_prom() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — JUNIOR PROM</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — JUNIOR PROM</div>
     <h1 class="soph-title">PROM NIGHT.</h1>
     <div class="soph-scene"><p>The theme is "A Night in Paris." The gym has been transformed in a way that would not fool anyone who has actually been to Paris. But you're here. It counts.</p></div>
     <div class="soph-prompt">WHO ARE YOU GOING WITH?</div>
@@ -3085,7 +3085,7 @@ function _jrSoc_prom() {
   document.getElementById('prom-c').onclick = () => { Engine.modifyStats({selfAwareness:2,happiness:2}); _flushStatToast(); _jrSoc_prom2(); };
 }
 function _jrSoc_prom2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — PROM · ARRIVALS</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — PROM · ARRIVALS</div>
     <div class="soph-scene"><p>The parking lot is a chaos of rented cars and phone cameras. Everyone's trying to get the photo before it rains. It doesn't rain.</p></div>
     <div class="soph-prompt">HOW DID YOU GET HERE?</div>
     <div class="soph-choices">
@@ -3098,7 +3098,7 @@ function _jrSoc_prom2() {
   document.getElementById('prom2-c').onclick = () => { Engine.modifyStats({happiness:1,relationships:2}); _flushStatToast(); _jrSoc_prom3(); };
 }
 function _jrSoc_prom3() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — PROM · THE NIGHT</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — PROM · THE NIGHT</div>
     <div class="soph-scene"><p>The lights are low. The DJ is decent. There are four hours of this left and you're exactly where you're supposed to be.</p></div>
     <div class="soph-prompt">HOW DO YOU SPEND IT?</div>
     <div class="soph-choices">
@@ -3115,7 +3115,7 @@ function _jrSoc_prom3() {
 //  LIFE PATH — TRIPLE-THREAT ATHLETE
 // ════════════════════════════════════════════════════════
 function _jrAth_football() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — STATE PLAYOFF · 4TH QUARTER</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — STATE PLAYOFF · 4TH QUARTER</div>
     <h1 class="soph-title" style="font-size:1.9rem">FOOTBALL.</h1>
     <div class="soph-scene"><p>Down by 4. Two minutes left. 3rd and 8. The QB is looking your way. The route opens up perfectly.</p></div>
     <div class="soph-prompt">WHAT DO YOU DO WITH THE BALL?</div>
@@ -3129,7 +3129,7 @@ function _jrAth_football() {
   document.getElementById('fb-c').onclick = () => { Engine.modifyStats({intelligence:2,sports:1}); _flushStatToast(); _jrAth_football2(); };
 }
 function _jrAth_football2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — STATE PLAYOFF · FINAL DRIVE</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — STATE PLAYOFF · FINAL DRIVE</div>
     <div class="soph-scene"><p>Running back breaks through the line. It's just you between him and the end zone. The whole season on the line.</p></div>
     <div class="soph-prompt">THE TACKLE:</div>
     <div class="soph-choices">
@@ -3143,7 +3143,7 @@ function _jrAth_football2() {
 }
 
 function _jrAth_baseball() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — CIF SEMIFINAL · BOTTOM 7TH</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — CIF SEMIFINAL · BOTTOM 7TH</div>
     <h1 class="soph-title" style="font-size:1.9rem">BASEBALL.</h1>
     <div class="soph-scene"><p>2 outs, runner on 2nd. You're up. The pitcher is dealing — 4 up, 4 down. The third base coach gives you the sign: green light. Your call.</p></div>
     <div class="soph-prompt">AT THE PLATE:</div>
@@ -3157,7 +3157,7 @@ function _jrAth_baseball() {
   document.getElementById('bb-c').onclick = () => { Engine.modifyStats({sports:3,athleticism:2}); _flushStatToast(); _jrAth_baseball2(); };
 }
 function _jrAth_baseball2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — CIF SEMIFINAL · 5TH INNING</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — CIF SEMIFINAL · 5TH INNING</div>
     <div class="soph-scene"><p>Shallow pop fly into no man's land between you and the shortstop. You're both going full speed. Somebody has to call it.</p></div>
     <div class="soph-prompt">WHAT DO YOU DO?</div>
     <div class="soph-choices">
@@ -3204,7 +3204,7 @@ function _jrAth_golf2() {
 const _SPLIT_CORRECT = { 'Bench Press':'push','Overhead Press':'push','Tricep Pushdowns':'push','Barbell Row':'pull','Pull-ups':'pull','Bicep Curls':'pull','Squat':'legs','Romanian Deadlift':'legs','Leg Press':'legs' };
 function _jrBody_split() {
   window._splitAssign = {};
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH GYM — DAY 1</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH GYM — DAY 1</div>
     <h1 class="soph-title" style="font-size:1.7rem">BUILD YOUR SPLIT.</h1>
     <div class="soph-scene"><p>You've decided on Push/Pull/Legs — the classic hypertrophy split. Now you have to actually build it. Assign each exercise to the right training day.</p></div>
     <div id="split-board" style="display:grid;gap:7px;margin:14px 0"></div>
@@ -3250,7 +3250,7 @@ function _jrBody_splitResult() {
     narr=`${correct}/9 correct. Your split is... a lot. Biceps on push day. Squats mid-pull session. You spend two weeks hitting the wrong muscles on the wrong days before looking it up.`;
   }
   Engine.modifyStats({ physique: physD, athleticism: 1 }); _flushStatToast();
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH GYM — WEEK 1 REVIEW</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH GYM — WEEK 1 REVIEW</div>
     <div class="soph-scene"><p>${narr}</p></div>
     <div class="soph-stat-delta">+${physD} Physique · +1 Athleticism</div>
     <div class="soph-nav"><span></span><button class="btn-primary" id="soph-done">CONTINUE →</button></div>`);
@@ -3258,7 +3258,7 @@ function _jrBody_splitResult() {
 }
 
 function _jrBody_diet() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — MONTH 2 · NUTRITION</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — MONTH 2 · NUTRITION</div>
     <h1 class="soph-title" style="font-size:1.9rem">WHAT ARE YOU EATING?</h1>
     <div class="soph-scene"><p>The gym is easy. The kitchen is where transformations actually happen. You need a plan.</p></div>
     <div class="soph-prompt">WEEKLY NUTRITION APPROACH:</div>
@@ -3272,7 +3272,7 @@ function _jrBody_diet() {
   document.getElementById('diet-c').onclick = () => { Engine.modifyStats({physique:1,happiness:2}); _flushStatToast(); _jrBody_diet2(); };
 }
 function _jrBody_diet2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH GYM — WEEK 8 CHECK-IN</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH GYM — WEEK 8 CHECK-IN</div>
     <div class="soph-scene"><p>8 weeks in. You've been consistent — or you've been trying to be. Someone at school asks you how many times you've been to the gym this week.</p></div>
     <div class="soph-prompt">YOUR CONSISTENCY OVER 8 WEEKS:</div>
     <div class="soph-choices">
@@ -3286,7 +3286,7 @@ function _jrBody_diet2() {
 }
 
 function _jrBody_progress() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — MONTH 4 · RECOVERY</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — MONTH 4 · RECOVERY</div>
     <h1 class="soph-title" style="font-size:1.9rem">THE PROGRESS CHECK.</h1>
     <div class="soph-scene"><p>4 months in. You can see the change in the mirror — and so can other people. But the gains are starting to slow, and your body needs to recover.</p></div>
     <div class="soph-prompt">YOUR RECOVERY APPROACH:</div>
@@ -3300,7 +3300,7 @@ function _jrBody_progress() {
   document.getElementById('prog-c').onclick = () => { Engine.modifyStats({physique:2,sleep:1}); _flushStatToast(); _jrBody_progress2(); };
 }
 function _jrBody_progress2() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH — AFTER SCHOOL</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH — AFTER SCHOOL</div>
     <div class="soph-scene"><p>Someone who hasn't seen you in two months stops you in the hallway. <em>"Wait — you look different."</em> They mean it as a compliment. You know it is one.</p></div>
     <div class="soph-prompt">WHAT DO YOU SAY?</div>
     <div class="soph-choices">
@@ -3317,7 +3317,7 @@ function showJuniorYearEnd() {
   const overlay=_getYrOverlay(), now=_currentStats();
   overlay.innerHTML=`
     <div class="ys-inner">
-      <div class="ys-badge">WESTBROOK HIGH · CUPERTINO, CA</div>
+      <div class="ys-badge">MONTA VISTA HIGH · CUPERTINO, CA</div>
       <div class="ys-year-label">JUNIOR YEAR</div>
       <div class="yr-complete">COMPLETE</div>
       <div class="yr-divider"></div>
@@ -3354,7 +3354,7 @@ function showSeniorYear() {
   const overlay=_getYrOverlay();
   overlay.innerHTML=`
     <div class="ys-inner">
-      <div class="ys-badge">WESTBROOK HIGH · SENIOR YEAR</div>
+      <div class="ys-badge">MONTA VISTA HIGH · SENIOR YEAR</div>
       <div class="ys-event-icon">📝</div>
       <div class="ys-title">COLLEGE APP SEASON</div>
       <p class="ys-card-desc" style="max-width:500px;font-size:1rem;line-height:1.7;margin-top:8px">
@@ -3476,7 +3476,7 @@ function showGraduation() {
            : "It was hard. But you're here.";
   overlay.innerHTML=`
     <div class="ys-inner" style="text-align:center">
-      <div class="ys-badge">WESTBROOK HIGH SCHOOL · CLASS OF 2030</div>
+      <div class="ys-badge">MONTA VISTA HIGH SCHOOL · CLASS OF 2026</div>
       <div class="ys-event-icon" style="font-size:4rem;margin:20px 0">🎓</div>
       <div class="ys-year-label" style="font-size:3rem;letter-spacing:.15em">GRADUATION</div>
       <div class="yr-complete" style="font-size:1.6rem;margin:6px 0">${label}</div>
@@ -3550,7 +3550,7 @@ window.showFreshmanYearEnd = function() {
   }[window.MYTH_BIO_SCENARIO] || "Bio class. Whatever happened in that room, you survived it.";
 
   _sophShow(`
-    <div class="soph-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN YEAR — RECAP</div>
+    <div class="soph-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN YEAR — RECAP</div>
     <h1 class="soph-title" style="font-size:2.6rem;margin-bottom:6px">YEAR ONE.</h1>
     <div class="soph-scene" style="max-width:560px;margin:0 auto 18px">
       <p style="font-size:1.2rem;line-height:1.8;color:#f0ece4">${_bioRecapLine}</p>
@@ -3572,7 +3572,7 @@ window.showFreshmanYearEnd = function() {
         { id:'studies', label:'STUDIES PERIOD',          desc:'Structured free period. More people. More drama. Easier on the GPA.' },
       ];
       _sophShow(`
-        <div class="soph-badge">WESTBROOK HIGH SCHOOL &nbsp;·&nbsp; SOPHOMORE YEAR</div>
+        <div class="soph-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; SOPHOMORE YEAR</div>
         <h1 class="soph-title">PICK YOUR CLASSES.</h1>
         <div class="soph-scene"><p>You get to choose two courses this year. Choose wisely — you'll actually have to show up.</p></div>
         <div class="soph-grade-choice-grid" id="soph-course-grid" style="grid-template-columns:1fr 1fr 1fr">
@@ -3887,7 +3887,7 @@ function _apcsa_final_waterBreak(second) {
 }
 function _apcsa_final_q3() {
   _sophShow(`<div class="soph-badge">ROOM 214 — FINAL · CONTINUING</div>
-    <div class="soph-code-block">String s = "Westbrook";\nSystem.out.println(s.length());</div>
+    <div class="soph-code-block">String s = "Monta Vista";\nSystem.out.println(s.length());</div>
     <div class="soph-prompt">WHAT IS PRINTED?</div>
     <div class="soph-choices">
       <button class="soph-choice" data-a="w"><span class="soph-choice-label">8</span></button>
@@ -3935,7 +3935,7 @@ function _apcsa_ambulance_scene() {
   const inner = document.getElementById('soph-inner');
   G.killTweensOf(inner); G.set(inner, {opacity:1, y:0});
   inner.innerHTML = `
-    <div class="soph-badge">WESTBROOK HIGH — EAST HALLWAY</div>
+    <div class="soph-badge">MONTA VISTA HIGH — EAST HALLWAY</div>
     <div class="amb-scene" id="amb-scene-box">
       <div class="amb-flash" id="amb-flash-el"></div>
       <div class="amb-text">
@@ -4432,7 +4432,7 @@ function _phys1_drop() {
 // ════════════════════════════════════════════════════════
 window.showPhysics_FieldTrip = function() { Engine.setFlag('soph_physics_trip_started'); _fieldtrip_intro(); };
 function _fieldtrip_intro() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH · AP PHYSICS 1</div><h1 class="soph-title">SURPRISE.</h1>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH · AP PHYSICS 1</div><h1 class="soph-title">SURPRISE.</h1>
     <div class="soph-speaker">MS. TORRES</div><div class="soph-speech">"Field trip. Friday. Great America. Permission slips due tomorrow. This is a physics lab — but yes, you can ride the rides."</div>
     <div class="soph-nav"><span class="soph-progress">Friday morning.</span><button class="btn-primary" id="soph-next">ARRIVE AT GREAT AMERICA →</button></div>`);
   document.getElementById('soph-next').onclick = _fieldtrip_park;
@@ -4615,7 +4615,7 @@ function _brawl_roundLose(round, pick, cpu) {
 // ════════════════════════════════════════════════════════
 window.showFitnessJourney = function() { Engine.setFlag('fitness_started'); _fitness_offer(); };
 function _fitness_offer() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH · GYM</div><h1 class="soph-title">THE GYM.</h1>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH · GYM</div><h1 class="soph-title">THE GYM.</h1>
     <div class="soph-scene"><p>Coach Rivera stops you after PE. "You've got potential. The weight room's open after school Monday through Thursday. It's not required. But you can tell who uses it."</p></div>
     <div class="soph-prompt">DO YOU WANT TO START GOING TO THE GYM?</div>
     <div class="soph-choices">
@@ -4626,7 +4626,7 @@ function _fitness_offer() {
   document.getElementById('fit-no').onclick   = () => _sophDone();
 }
 function _fitness_commitment() {
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH · GYM</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH · GYM</div>
     <div class="soph-prompt">HOW MUCH TIME CAN YOU COMMIT?</div>
     <div class="soph-choices">
       <button class="soph-choice" id="fit-low"><span class="soph-choice-label">LOW — 1 day/week</span><span class="soph-choice-hint">Easy to keep. Slow gains.</span></button>
@@ -4640,7 +4640,7 @@ function _fitness_commitment() {
 function _fitness_workout(level) {
   const o = { low:{stats:{physique:1,athleticism:1},narr:'One session a week. Your energy levels up slightly after a month.'}, medium:{stats:{physique:2,athleticism:2,sleep:1,stress:-1},narr:'Three days a week. You see actual change. Your sleep improves too.'}, high:{stats:{physique:3,athleticism:3,sleep:-1,stress:2},narr:'Five days a week. Best shape of your life. Also exhausted.'} }[level];
   Engine.modifyStats(o.stats); _flushStatToast();
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH · GYM</div>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH · GYM</div>
     <div class="soph-scene"><p>${o.narr}</p></div>
     <div class="soph-stat-delta">${Object.entries(o.stats).map(([k,v])=>`${v>0?'+':''}${v} ${STAT_LABELS[k]||k}`).join(' · ')}</div>
     <div class="soph-nav"><span></span><button class="btn-primary" id="soph-done">CONTINUE →</button></div>`);
@@ -4652,7 +4652,7 @@ function _fitness_workout(level) {
 // ════════════════════════════════════════════════════════
 window.showSophYearEnd = function() {
   const start = window.MYTH_START_STATS || {}, cur = Engine.getState().stats;
-  _sophShow(`<div class="soph-badge">WESTBROOK HIGH SCHOOL · END OF SOPHOMORE YEAR</div><h1 class="soph-title">SOPHOMORE YEAR DONE.</h1>
+  _sophShow(`<div class="soph-badge">MONTA VISTA HIGH SCHOOL · END OF SOPHOMORE YEAR</div><h1 class="soph-title">SOPHOMORE YEAR DONE.</h1>
     <div class="soph-scene"><p>Two years in. You know the campus now — the rhythms, the people, the unspoken rules. Something changed this year.</p></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin:18px 0">
       ${Object.entries(cur).map(([k,v]) => {
