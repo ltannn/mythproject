@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MYTH — High School Life Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<!-- ─────────────────────────────── SCENE: BOOT ──────────────────────────── -->
+<div id="scene-boot" class="scene active">
+  <div class="boot-logo">
+    <span class="boot-letter" style="--i:0">M</span>
+    <span class="boot-letter" style="--i:1">Y</span>
+    <span class="boot-letter" style="--i:2">T</span>
+    <span class="boot-letter" style="--i:3">H</span>
+  </div>
+  <p class="boot-sub">A HIGH SCHOOL LIFE SIMULATOR</p>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: INTRO ─────────────────────────── -->
+<div id="scene-intro" class="scene">
+  <div id="hallway">
+    <div class="hall-layer hall-l5"></div>
+    <div class="hall-layer hall-l4"></div>
+    <div class="hall-layer hall-l3"></div>
+    <div class="hall-layer hall-l2"></div>
+    <div class="hall-layer hall-l1"></div>
+    <div class="hall-center-light"></div>
+  </div>
+  <div class="intro-text-wrap">
+    <p class="intro-line" id="intro-l1">FIRST DAY.</p>
+    <p class="intro-line" id="intro-l2">Every decision matters.</p>
+    <p class="intro-line" id="intro-l3">Four years go fast.</p>
+  </div>
+  <div class="intro-continue" id="intro-continue">
+    <span>PRESS ANY KEY</span>
+    <div class="blink-bar"></div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: NAME ──────────────────────────── -->
+<div id="scene-name" class="scene">
+  <div class="scene-header">
+    <div class="scene-step">STEP 01 / 04</div>
+    <div class="scene-title">WHO ARE YOU?</div>
+  </div>
+  <div class="id-card" id="id-card">
+    <div class="id-card-header">
+      <span class="id-school">MONTA VISTA HIGH SCHOOL</span>
+      <span class="id-year">CLASS OF 2026</span>
+    </div>
+    <div class="id-card-body">
+      <div class="id-photo-slot">
+        <div class="id-photo-silhouette"></div>
+        <div class="id-photo-label">PHOTO ID</div>
+      </div>
+      <div class="id-fields">
+        <div class="id-field">
+          <label class="id-label">STUDENT NAME</label>
+          <div class="id-input-wrap">
+            <input type="text" id="name-input" class="id-input" placeholder="Type your name..." maxlength="24" autocomplete="off" spellcheck="false" />
+            <div class="input-cursor"></div>
+          </div>
+        </div>
+        <div class="id-field">
+          <label class="id-label">GRADE</label>
+          <div class="id-prefill">09 — FRESHMAN</div>
+        </div>
+        <div class="id-field">
+          <label class="id-label">STUDENT ID</label>
+          <div class="id-prefill id-number">WB–2026–????</div>
+        </div>
+      </div>
+    </div>
+    <div class="id-stripe"></div>
+  </div>
+  <button class="btn-primary" id="name-confirm" disabled>CONFIRM NAME →</button>
+</div>
+
+<!-- ─────────────────────────────── SCENE: FRIEND GROUP ──────────────────── -->
+<div id="scene-group" class="scene">
+  <div class="scene-header">
+    <div class="scene-step">STEP 02 / 04</div>
+    <div class="scene-title">CHOOSE YOUR FRIEND GROUP</div>
+  </div>
+  <div class="group-cards" id="group-cards">
+
+    <!-- SOGYAG -->
+    <div class="group-card" data-group="mob" style="--accent:#FC7B54">
+      <div class="card-slash"></div>
+      <div class="card-glow"></div>
+      <div class="card-top">
+        <span class="card-badge" style="background:#FC7B54;color:#fff">POPULAR</span>
+      </div>
+      <div class="card-name">SOGYAG</div>
+      <div class="card-vibes">
+      </div>
+    </div>
+
+    <!-- XOBX -->
+    <div class="group-card featured" data-group="balance" style="--accent:#F7B731">
+      <div class="card-slash"></div>
+      <div class="card-glow"></div>
+      <div class="card-top">
+        <span class="card-badge" style="background:#F7B731;color:#0C0907">WELL-ROUNDED</span>
+      </div>
+      <div class="card-name">XOBX</div>
+      <div class="card-vibes">
+      </div>
+    </div>
+
+    <!-- SACUL -->
+    <div class="group-card" data-group="grind" style="--accent:#6BCB77">
+      <div class="card-slash"></div>
+      <div class="card-glow"></div>
+      <div class="card-top">
+        <span class="card-badge" style="background:#6BCB77;color:#0C0907">ACADEMIC</span>
+      </div>
+      <div class="card-name">SACUL</div>
+      <div class="card-vibes">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: PERSONALITY ───────────────────── -->
+<div id="scene-personality" class="scene">
+  <div class="scene-header">
+    <div class="scene-step">STEP 03 / 04</div>
+    <div class="scene-title">WHO ARE YOU?</div>
+  </div>
+  <div class="personality-cards" id="personality-cards">
+
+    <div class="pers-card" data-pers="grinder">
+      <div class="pers-name">THE NERD</div>
+      <div class="pers-desc">You spend a lot of time studying and have a bright future ahead.</div>
+    </div>
+
+    <div class="pers-card" data-pers="social">
+      <div class="pers-name">EXTROVERT</div>
+      <div class="pers-desc">You live for the connection, and in every room you enter, people gravitate to you.</div>
+    </div>
+
+    <div class="pers-card" data-pers="athlete">
+      <div class="pers-icon">⚡</div>
+      <div class="pers-name">THE ATHLETE</div>
+      <div class="pers-desc">You've been playing a sport your whole life, and everyone knows you as the athletic kid.</div>
+    </div>
+
+    <div class="pers-card" data-pers="charmer">
+      <div class="pers-name">THE CHARMER</div>
+      <div class="pers-desc">Hella rizzy, and you look good. Get a fresh haircut every week.</div>
+    </div>
+
+    <div class="pers-card" data-pers="observer">
+      <div class="pers-name">THE OBSERVER</div>
+      <div class="pers-desc">You're quiet and underground, but you know all the tea about people</div>
+    </div>
+
+    <div class="pers-card" data-pers="rebel">
+      <div class="pers-name">THE REBEL</div>
+      <div class="pers-desc">Rules are suggestions. Authority is a suggestion. You do it your way — consequences figure themselves out later.</div>
+    </div>
+
+    <div class="pers-card" data-pers="empath">
+      <div class="pers-icon">🫀</div>
+      <div class="pers-name">THE EMPATH</div>
+      <div class="pers-desc">You feel everything — yours and everyone else's. People come to you with their problems. You carry more than you show.</div>
+    </div>
+
+    <div class="pers-card wildcard" data-pers="wildcard">
+      <div class="pers-icon">🎲</div>
+      <div class="pers-name">THE WILDCARD</div>
+      <div class="pers-desc">Even you don't know what you are yet. Hidden bonuses. Unpredictable paths. High risk. High reward.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: RANDOMIZE ─────────────────────── -->
+<div id="scene-randomize" class="scene">
+  <div class="scene-header">
+    <div class="scene-step">STEP 04 / 04</div>
+    <div class="scene-title">RANDOMIZING YOUR STORY</div>
+    <div class="scene-subtitle">Some things you don't choose.</div>
+  </div>
+
+  <div class="random-stage" id="random-stage">
+    <!-- Cards revealed here dynamically -->
+  </div>
+
+  <div class="random-progress" id="random-progress">
+    <div class="rp-dots">
+      <span class="rp-dot" data-idx="0"></span>
+      <span class="rp-dot" data-idx="1"></span>
+      <span class="rp-dot" data-idx="2"></span>
+      <span class="rp-dot" data-idx="3"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: CHARACTER CARD ────────────────── -->
+<div id="scene-charcard" class="scene">
+  <div class="cc-wrap" id="cc-wrap">
+    <div class="cc-header">
+      <div class="cc-school">MONTA VISTA HIGH SCHOOL — CLASS OF 2026</div>
+      <div class="cc-title">STUDENT PROFILE</div>
+    </div>
+    <div class="cc-body">
+      <div class="cc-left">
+        <div class="cc-avatar" id="cc-avatar">
+          <div class="cc-avatar-inner"></div>
+          <div class="cc-avatar-glitch"></div>
+        </div>
+        <div class="cc-identity">
+          <div class="cc-name" id="cc-name-display">—</div>
+          <div class="cc-group-badge" id="cc-group-display">—</div>
+          <div class="cc-pers-badge" id="cc-pers-display">—</div>
+        </div>
+        <div class="cc-attributes" id="cc-attributes">
+          <!-- Height, skin, eyes, hair filled by JS -->
+        </div>
+        <div class="cc-cards-mini" id="cc-cards-mini">
+          <!-- Rumor / Background / Secret mini cards -->
+        </div>
+      </div>
+      <div class="cc-right">
+        <div class="cc-stats-title">STARTING STATS</div>
+        <div class="cc-stats" id="cc-stats-bars">
+          <!-- Stat bars filled by JS -->
+        </div>
+      </div>
+    </div>
+    <div class="cc-footer">
+      <div class="cc-footer-line">EVERYTHING STARTS HERE.</div>
+      <button class="btn-primary btn-large" id="begin-btn">FRESHMAN YEAR BEGINS →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: TRANSITION ───────────────────── -->
+<div id="scene-transition" class="scene">
+  <div class="trans-text" id="trans-text"></div>
+</div>
+
+<!-- ─────────────────────────────── SCENE: GAME WORLD ───────────────────── -->
+<div id="scene-game" class="scene">
+
+  <!-- HUD top bar -->
+  <div id="game-hud">
+    <span class="hud-school">MONTA VISTA HIGH SCHOOL</span>
+    <div class="hud-divider"></div>
+    <span class="hud-grade" id="hud-grade">GRADE 9</span>
+    <div class="hud-divider"></div>
+    <span class="hud-period" id="hud-period">Before School</span>
+    <span class="hud-day" id="hud-day">Monday</span>
+    <div class="hud-spacer"></div>
+    <span class="hud-zone-current" id="hud-zone">—</span>
+    <div class="hud-divider"></div>
+    <button class="hud-stats-toggle" id="hud-stats-btn">STATS ↗</button>
+    <div class="hud-divider"></div>
+    <button class="hud-stats-toggle" id="hud-next-period-btn">NEXT PERIOD →</button>
+    <div class="hud-divider"></div>
+    <button class="hud-stats-toggle" id="hud-pause-btn">[P] PAUSE</button>
+  </div>
+
+  <!-- Three.js 3D world -->
+  <div id="world3d-container">
+    <canvas id="world3d-c"></canvas>
+    <!-- Loading progress (shown during world build) -->
+    <div id="w3d-load">
+      <div class="w3d-load-bar-bg"><div id="w3d-lbar"></div></div>
+      <div id="w3d-lmsg">Loading...</div>
+    </div>
+    <!-- Minimap -->
+    <div id="minimap"><canvas id="mm" width="170" height="170"></canvas></div>
+    <!-- Interact prompt -->
+    <div id="ibox"><span id="itxt">Object</span><small id="ihelp">Press E for info · F for door</small></div>
+    <!-- Notification -->
+    <div id="notif"></div>
+    <!-- Sophomore year nav hint -->
+    <div id="soph-nav-hint" style="display:none"></div>
+    <!-- Stat change toast -->
+    <div id="stat-toast"></div>
+    <!-- Crosshair -->
+    <div id="cross"></div>
+    <!-- Click-to-lock hint -->
+    <div id="lock-hint">Click to control camera</div>
+  </div>
+
+  <!-- Stats sidebar (slides in) -->
+  <div id="stats-sidebar">
+    <div class="ss-header">
+      STATS
+      <span class="ss-close" id="stats-close">✕</span>
+    </div>
+    <div class="ss-stats" id="ss-stats-list">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- Dialogue box (slides up from bottom) -->
+  <div id="dialogue-box">
+    <div class="db-close-btn" id="db-close">CLOSE ✕</div>
+    <div class="db-speaker-row">
+      <div class="db-portrait" id="db-portrait">👤</div>
+      <div>
+        <div class="db-speaker-name" id="db-speaker-name">—</div>
+        <div class="db-speaker-role" id="db-speaker-role">—</div>
+      </div>
+    </div>
+    <div class="db-text" id="db-text"></div>
+    <div class="db-choices" id="db-choices"></div>
+  </div>
+
+  <!-- Grade unlock toast -->
+  <div class="grade-unlock-toast" id="grade-unlock-toast">
+    <div class="gut-title" id="gut-title">GRADE 10</div>
+    <div class="gut-sub">NEW AREAS UNLOCKED</div>
+  </div>
+
+</div><!-- /scene-game -->
+
+<!-- ─────────────────────────────── EVENT MODAL ──────────────────────────── -->
+<div id="event-modal" class="event-modal">
+  <div id="event-modal-card" class="em-card">
+    <div class="em-card-top">
+      <span class="em-category" id="em-category"></span>
+      <span class="em-location" id="em-location"></span>
+    </div>
+    <div class="em-title" id="em-title"></div>
+    <div class="em-setup" id="em-setup"></div>
+    <div class="em-choices" id="em-choices"></div>
+  </div>
+</div>
+
+<!-- FLASH OVERLAY -->
+<div id="flash-overlay"></div>
+
+<!-- ─────────────────────────────── ORIENTATION OVERLAY ──────────────────── -->
+<div id="orientation-overlay" class="or-overlay">
+  <div class="or-inner">
+    <div class="or-badge">MONTA VISTA HIGH SCHOOL &nbsp;·&nbsp; FRESHMAN ORIENTATION</div>
+    <h1 class="or-title">FIRST MORNING.</h1>
+    <div class="or-scene">
+      <p>The gym smells like floor wax and new shoes. Folding chairs line the bleachers. Coach Rivera adjusts the podium mic — it squeals, then settles.</p>
+      <p>Freshmen stream in from the double doors. You've got maybe two minutes before it starts.</p>
+      <p class="or-prompt">You scan the bleachers. Where do you sit?</p>
+    </div>
+    <div class="or-choices">
+      <button class="or-choice-btn" data-choice="alone_back">
+        <span class="ocb-label">ALONE IN THE BACK</span>
+        <span class="ocb-hint">Top row. Nobody bothers you. You can see everything from up here.</span>
+      </button>
+      <button class="or-choice-btn" data-choice="familiar_face">
+        <span class="ocb-label">NEXT TO SOMEONE FAMILIAR</span>
+        <span class="ocb-hint">You recognize them from middle school. Small relief. Just barely.</span>
+      </button>
+      <button class="or-choice-btn" data-choice="front_row">
+        <span class="ocb-label">IN THE FRONT ROW</span>
+        <span class="ocb-hint">Make an impression. Let Coach Rivera see your face first.</span>
+      </button>
+      <button class="or-choice-btn" data-choice="popular_kids">
+        <span class="ocb-label">NEXT TO THE POPULAR KIDS</span>
+        <span class="ocb-hint">You spot them immediately. Everyone does. A few of them glance over.</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── FULL-SCREEN MAP ────────────────────── -->
+<div id="fullmap-overlay">
+  <canvas id="fullmap-canvas"></canvas>
+</div>
+
+<!-- ─────────────────────────────── BIO CLASS OVERLAY ───────────────────── -->
+<div id="bio-overlay" class="or-overlay">
+  <div class="bio-inner"></div>
+</div>
+
+<!-- ─────────────────────────────── PE / BOMB THREAT OVERLAY ────────────── -->
+<div id="pe-overlay" class="or-overlay">
+  <div class="pe-inner"></div>
+</div>
+
+<!-- ─────────────────────────────── YEAR END CUTSCENE ───────────────────── -->
+<div id="year-end-overlay" class="year-end-overlay" style="display:none"></div>
+
+<!-- ─────────────────────────────── CLUB FAIR OVERLAY ───────────────────── -->
+<div id="club-fair-overlay" class="or-overlay">
+  <div class="cf-inner or-inner"></div>
+</div>
+
+<!-- ─────────────────────────────── SOPHOMORE OVERLAY ────────────────────── -->
+<div id="soph-overlay" style="display:none">
+  <div class="soph-inner" id="soph-inner"></div>
+</div>
+
+<!-- ─────────────────────────────── CONTROLS OVERLAY ─────────────────────── -->
+<div id="controls-overlay" style="display:none">
+  <div class="ctrl-inner">
+    <div class="ctrl-title">CONTROLS</div>
+    <div class="ctrl-grid">
+      <div class="ctrl-row"><span class="ctrl-key">W A S D</span><span class="ctrl-desc">Move</span></div>
+      <div class="ctrl-row"><span class="ctrl-key">MOUSE</span><span class="ctrl-desc">Look around</span></div>
+      <div class="ctrl-row"><span class="ctrl-key">F</span><span class="ctrl-desc">Open / close door</span></div>
+      <div class="ctrl-row"><span class="ctrl-key">E</span><span class="ctrl-desc">Interact</span></div>
+      <div class="ctrl-row"><span class="ctrl-key">M</span><span class="ctrl-desc">Toggle map</span></div>
+      <div class="ctrl-row"><span class="ctrl-key">P</span><span class="ctrl-desc">Pause</span></div>
+    </div>
+    <div class="ctrl-hint">PRESS ANY KEY OR CLICK TO BEGIN</div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────── PAUSE OVERLAY ────────────────────────── -->
+<div id="pause-overlay" class="po-overlay">
+  <div class="po-inner">
+    <div class="po-header">
+      <span class="po-title">PAUSED</span>
+      <span class="po-key-hint">[P] RESUME</span>
+    </div>
+    <div class="po-player-info" id="po-player-info"></div>
+    <div class="po-section-label">YOUR STATS</div>
+    <div class="po-stats" id="po-stats"></div>
+    <button class="btn-primary" id="po-resume-btn" style="margin-top:22px;align-self:center">RESUME →</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="campus.js"></script>
+<script src="engine.js"></script>
+<script src="events.js"></script>
+<script src="world3d.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
